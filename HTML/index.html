@@ -5,26 +5,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PETBot Company</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href=".././images/HomePage/Favicon.ico"
+    />
     <!--file CSS HomePage-->
     <link rel="stylesheet" href=".././CSS/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&display=swap"
       rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
     <div class="home-page">
       <head>
         <header>
-          <div class="logo">
-            <p class="text1">BOTTLE</p>
-            <img src=".././images/HomePage/Logo/logo.jpg" alt="logo" />
-            <p>PET</p>
+          <div class="logo" style="margin-top: 2.5px">
+            <a href="index.html" style="display: flex; text-decoration: none">
+              <p
+                class="text1"
+                style="
+                  font: italic 8px 'Barlow Condensed';
+                  color: white;
+                  margin: 6px 0 0 72px;
+                "
+              >
+                BOTTLE
+              </p>
+              <img
+                src=".././images/HomePage/Logo/logo.jpg"
+                alt="logo"
+                style="margin-top: 16px; position: relative; left: -20px"
+              />
+              <p
+                style="
+                  font: bold 40px 'Balsamiq Sans';
+                  font-style: normal;
+                  color: #c2c0c0;
+                  position: relative;
+                  left: -20px;
+                "
+              >
+                PET
+              </p>
+            </a>
           </div>
-          <div class="search-bar"></div>
-          <div class="nav-bar"></div>
+          <div class="search-bar">
+            <label
+              ><i
+                class="fa-solid fa-magnifying-glass"
+                style="
+                  margin-top: 16px;
+                  color: #000000;
+                  font-size: 10px;
+                  position: relative;
+                  left: 22px;
+                "
+              ></i
+            ></label>
+            <input
+              type="search"
+              placeholder="search"
+              id="search-bar"
+              style="margin-top: 14px; width: 250px; text-indent: 30px"
+            />
+          </div>
+          <div class="nav-bar" style="display: flex">
+            <ul class="nav" style="font-size: 18px; margin: 14px">
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="product.html">Products</a>
+              </li>
+              <label
+                ><i
+                  class="fa-solid fa-less-than fa-rotate-270 fa-2xs"
+                  style="
+                    color: #ffffff;
+                    position: relative;
+                    margin: 11px 0 0 0;
+                    left: -269px;
+                  "
+                ></i
+              ></label>
+              <li><a href="news.html">News</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart-notifi-user">
+              <a href="shopping-cart.html"
+                ><i
+                  class="fa-solid fa-cart-shopping"
+                  style="
+                    color: #ffffff;
+                    font-size: 18px;
+                    position: relative;
+                    right: 18px;
+                    top: -2px;
+                  "
+                ></i
+              ></a>
+              <a href="notification.html"
+                ><i
+                  class="fa-solid fa-bell"
+                  style="
+                    color: #ffffff;
+                    font-size: 18px;
+                    position: relative;
+                    right: 10px;
+                    top: -2px;
+                  "
+                ></i
+              ></a>
+              <a href="user-login.html"
+                ><i
+                  class="fa-solid fa-circle-user"
+                  style="color: #ffffff; font-size: 25px; margin-top: 0"
+                ></i
+              ></a>
+            </div>
+          </div>
           <div class="icons-nav-bar"></div>
         </header>
         <div class="banner"></div>
