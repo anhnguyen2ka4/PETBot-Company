@@ -1,216 +1,387 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-
 .homePage {
     box-sizing: border-box;
     width: auto;
     margin: auto;
 }
 
-/* HEADER */
-.header {
-    height: max-content;
-    background: #000000;
-    position: sticky;
-    z-index: 1;
-    top: 0;
-}
 
-nav .logo {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    margin-left: 3.2rem;
-    /* margin-top: 5px; */
-    justify-content: center;
-}
-
-nav img {
-    width: 24px;
-    height: 24px;
-}
-
-.textLogo1 {
-    font-size: 9px;
-    color: #eae3e3;
-    font-family: 'Barlow Condensed', sans-serif;
-}
-
-.textLogo2 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #c2c0c0;
-    font-family: 'Balsamiq Sans', sans-serif;
-}
-
-nav {
-    justify-content: space-between;
-    display: flex;
-}
-
-nav a {
-    font-family: sans-serif;
-    color: #ffffff;
-    display: flex;
-    text-decoration: none;
-}
-
-nav .link {
-    padding: 20px;
-    list-style: none;
-    display: inline-flex;
-}
-
-nav .link:hover {
-    background: #343333;
-}
-
-nav .icons label {
-    position: relative;
-    top: 25px;
-    float: left;
-    cursor: pointer;
-}
-
-nav .icons {
-    margin-right: 72px;
-}
-
-/*DropMenu*/
-.drop-menu {
-    position: absolute;
-    display: inline-flex;
-    overflow: hidden;
-    text-decoration: none;
-    z-index: 1;
-    margin-top: 38px;
-    margin-left: -408px;
-    line-height: 40px;
-    visibility: hidden;
-    border-radius: 6px;
-}
-
-.menu a:hover {
-    background: #343333;
-}
-
-.menu:hover .drop-menu {
-    visibility: visible;
-    box-shadow: 3px 1.5px 3px 1.5px #ffffff;
-}
-
-.drop-menu p {
-    font-size: 20px;
-    font-weight: bolder;
-    color: #ffffff;
-}
-
-.drop-menu-1,
-.drop-menu-2,
-.drop-menu-3,
-.drop-menu-4 {
-    padding: 20px 20px 20px 40px;
-    width: 250px;
-    list-style: none;
-    background: #000000;
-}
-
-
-/* Banner */
+/*================== Banner ===================*/
 .image-banner {
     background-image: url('.././images/HomePage/Banner/Banner2024.png');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
-    box-sizing: border-box;
-    height: 32rem;
+    background-repeat: no-repeat;
+    height: 36rem;
 }
 
-.text-btn-banner .text {
+.text-btn-banner .text-header {
     font-family: 'Balsamiq Sans', sans-serif;
     font-weight: bolder;
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .text-btn-banner p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.text-btn-banner .btn {
-    padding: 0.5rem;
-    color: #ffffff;
-    background: #343333;
+.box-banner .btn {
+    margin-top: 1rem;
+    background: #dfdfdf;
+    padding: 0.8rem 1rem;
     cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 3px 4px 5px #ffffff;
 }
 
-.text-btn-banner .btn:hover {
+.box-banner .btn:hover a {
+    color: #ffffff;
+}
+
+.box-banner .btn:hover {
     background: #000000;
-    box-shadow: 3px 4px 5px #ffffff;
+
+}
+
+.box-banner .btn a {
+    color: #000000;
+    text-decoration: none;
 }
 
 .text-btn-banner {
     text-align: center;
-    /* position: relative; */
-    width: 35rem;
+    width: 27rem;
     float: right;
-    /* top: -21rem;
-    left: 45rem; */
-    line-height: 3rem;
-    margin-top: -360px;
-    margin-right: 50px;
+    line-height: 2.5rem;
+    margin-top: -25rem;
+    margin-right: 6rem;
 }
 
-/* FeaturesProducts */
-.features-products {
-    box-sizing: border-box;
-    width: 90%;
-    text-align: center;
-    align-items: center;
-    height: 800px;
-    margin: 60px auto;
-}
+/*=================== End Banner ===============*/
 
-.features-products .box {
+
+
+/*==================== Contents include: Products and Aside (email, feedback, latest news) */
+.contents {
     display: flex;
-    flex-wrap: wrap;
+    height: max-content;
+    position: relative;
 }
 
-.features-products .box .product {
-    box-sizing: border-box;
-    margin: 50px auto 0 auto;
-    background-size:cover;
-    background-repeat: no-repeat;
-    width: 250px;
-    height: 300px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+/*==================== Products ================*/
+.products {
+    position: relative;
+    width: 60.41%;
+    margin-left: 5%;
+    height: max-content;
 }
 
-.features-products img {
-    width: 100%;
-    height: 90%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+.products h2 {
+    font-weight: bold;
+    font-size: 2.2rem;
 }
 
-
-
-/* ContentText1 */
-.content-text-1 {
-    width: 85%;
-    margin: auto;
-    font-size: 15px;
-    font-weight: bolder;
+.products #text {
+    color: #777777;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #777777;
 }
 
-.content-text-1 h1 {
-    font-weight: normal;
+.menu_buttons {
+    padding: 1rem 0 1.5rem 0;
+    display: flex;
+    width: max-content;
+}
+
+.menu_buttons .btn {
+    background-color: #DDDEE2;
+    color: #000000;
+    padding: 0.8rem 4.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-left: 1px solid #000000;
+}
+
+.menu_buttons .btn:hover {
+    opacity: 0.8;
+}
+.menu_buttons .btn.active {
+    transition: s;
+    color: #ffffff;
+    background: #000000;
+}
+
+.listPage {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-top: 1rem;
+}
+
+.listPage li {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+}
+
+.listPage li:hover {
+    background-color: #eeeeee;
+}
+
+.listPage .active {
+    background-color: #eeeeee;
+}
+
+.introducing {
+    width: 100%;
+    /* background-color: #DDDEE2; */
+    margin: 2.8rem 0 5rem;
+}
+
+.introduce {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.introduce .box {
+    line-height: 1.5rem;
+    width: 100%;
+    padding: 2rem 0.5rem 1rem 0;
+}
+
+.introduce .box h2 {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.introduce .box p {
+    padding: 0 0 0 2rem;
+    color: #000000;
+    word-spacing: 0.4rem;
+}
+
+.introduce .image {
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    height: 40rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.introduce .image img {
+    height: 35rem;
+    width: 90%;
+}
+
+/* ===============End Products ================ */
+
+/* ===============Aside ======================= */
+aside {
+    position: relative;
+    width: 30%;
+    margin: 4.5rem auto;
+    height: max-content;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+aside .receive-email {
+    border: 1px solid #dfdfdf;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    line-height: 4rem;
+}
+
+aside .receive-email:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.receive-email .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.receive-email .text {
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.receive-email input {
+    text-align: center;
+    padding: 0.8rem 2rem;
+}
+
+.receive-email button {
+    padding: 0.5rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.receive-email button:hover {
+    opacity: 1;
+}
+
+aside .testimonials {
+    width: 88%;
+    z-index: 1;
+    margin: auto;
+}
+
+.testimonials .row-1 {
+    position: relative;
+    padding: 5rem 0 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.testimonials .row-1 .title {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.testimonials .row-1 .btns {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.testimonials .row-1 .btn {
+    opacity: 0.5;
+    padding: 0.2rem 0.8rem;
+    border: 1px solid #dfdfdf;
+}
+
+.testimonials .row-1 .btn:hover {
+    opacity: 1;
+}
+
+.testimonials .contents {
+    position: relative;
+    line-height: 1.5rem;
+    text-align: center;
+    display: block;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.testimonials .contents .feedback {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #eeeeee;
+}
+
+.testimonials .contents img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.latest-news {
+    position: relative;
+    width: 88%;
+    margin: 6rem auto;
+}
+
+.latest-news img {
+    width: 100%;
+    height: 12rem;
+}
+
+.latest-news .title {
+    color: #000000;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.latest-news .title:hover,
+.testimonials .title:hover {
+    text-decoration: underline;
+}
+
+.latest-news .day {
+    color: #777777;
+    font-size: 0.8rem;
+    float: inline-end;
+}
+
+.news {
+    margin-bottom: 2rem;
+}
+
+.latest-news .box-btn {
+    text-align: center;
+}
+
+.latest-news .btn {
+    cursor: pointer;
+    font-size: 0.8rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.latest-news .btn:hover {
+    background-color: #777777;
+}
+
+.faq {
+    width: 100%;
+    margin: 6rem auto 0;
+}
+
+.accordion li {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.accordion .content-question {
+    background-color: #DDDEE2;
+    font-size: 1rem;
+    color: #000000;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type=radio]:checked+label+.content-question {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type=radio]:checked+label::before {
+    content: '-';
 }

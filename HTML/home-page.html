@@ -12,9 +12,6 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href=".././CSS/home-page.css" />
     <link rel="stylesheet" href=".././CSS/main.css" />
-    <!-- Link JS -->
-    <link rel="stylesheet" href=".././JS/main.js" />
-    <link rel="stylesheet" href=".././JS/home-page.js" />
     <!-- Link FontAwesome -->
     <link
       rel="stylesheet"
@@ -33,6 +30,7 @@
   </head>
   <body>
     <div class="homePage">
+      <!-- --------------- Header ---------------- -->
       <section class="header">
         <nav>
           <div class="logo">
@@ -48,7 +46,7 @@
           <ul>
             <li class="link"><a href=".././HTML/home-page.html">Home</a></li>
             <li class="link menu-products">
-              <a href="">Products</a>
+              <a href="#">Products</a>
               <div class="drop-menu">
                 <ul class="drop-menu-1">
                   <li class="text-header">| By Material</li>
@@ -150,16 +148,19 @@
             <li class="link"><a href="">Feedback</a></li>
           </ul>
           <div class="icons">
-            <i
-              class="fa-solid fa-magnifying-glass fa-lg"
-              style="color: #ffffff"
-            ></i
-            ><a href="#"
-              ><i
+            <div onclick="toggleSearchForm()">
+              <i
+                class="fa-solid fa-magnifying-glass fa-lg"
+                style="color: #ffffff"
+              ></i>
+            </div>
+            <div class="icon-cart">
+              <i
                 class="fa-solid fa-cart-shopping fa-lg"
                 style="color: #ffffff"
-              ></i
-            ></a>
+              ></i>
+              <span>0</span>
+            </div>
             <a href="#"
               ><i
                 class="fa-solid fa-circle-user fa-2xl"
@@ -168,10 +169,25 @@
             ></a>
           </div>
         </nav>
+        <div id="showSearch">
+          <input type="search" placeholder="search here..." />
+        </div>
+        <!-- <form action="" class="login-form active" onsubmit="checkSub2()">
+          <h3>login now</h3>
+          <input type="email" placeholder="your email" class="box" />
+          <input type="password" placeholder="your password" class="box" />
+          <p>forget your password <a href="comingsoon.html">click here</a></p>
+          <p>don't have an account <a href="register.html">create now</a></p>
+          <input type="submit" value="login now" class="btn" />
+        </form> -->
       </section>
+
+      <!-- --------------- SCroll Up Button ---------------- -->
       <a class="goToUp" href="#"
         ><i class="fa-solid fa-arrow-up" style="color: #000000"></i
       ></a>
+
+      <!-- --------------- Banner ---------------- -->
       <section class="box-banner">
         <div class="image-banner"></div>
         <div class="text-btn-banner">
@@ -185,877 +201,175 @@
           </button>
         </div>
       </section>
+
+      <!-- --------------- Content ---------------- -->
       <div class="contents">
         <section class="products">
+          <!-- --------------- Our Product ---------------- -->
           <h2>| Our Products</h2>
-          <div class="tab__title">
-            <span class="tab__btn active-tab" onclick="showItemAll()">All</span>
-            <span class="tab__btn" onclick="showItemLatest()">Latest</span>
-            <span class="tab__btn" onclick="showItemBestSellers()"
-              >Best Sellers</span
+          <p id="text">
+            Save your money and time with our store. Here's the best part of our
+            impressive assortment.
+          </p>
+          <!-- --------------- Menu Show Item with selection button ---------------- -->
+          <div class="menu_buttons">
+            <span class="btn active" onclick="showItems('all')">All</span>
+            <span class="btn" onclick="showItems('latest')">Latest</span>
+            <span class="btn" onclick="showItems('best-Sellers')"
+              >Best-Sellers</span
             >
-            <span class="tab__btn" onclick="showItemSpesial()">Spesial</span>
+            <span class="btn" onclick="showItems('spesial')">Spesial</span>
           </div>
-          <div class="tab__items">
-            <div class="tab__item active-tab" id="item-all">
-              <div class="products-container grid">
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          aria-label="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-              </div>
-            </div>
-            <div class="tab__item" id="item-latest">
-              <div class="products-container grid">
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          aria-label="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-              </div>
-            </div>
-            <div class="tab__item" id="item-best-sellers">
-              <div class="products-container grid">
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          aria-label="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-              </div>
-            </div>
-            <div class="tab__item" id="item-spesial">
-              <div class="products-container grid">
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          aria-label="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-                <div class="product__item">
-                  <div class="product__banner">
-                    <a href="details.html">
-                      <img
-                        src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
-                        alt="Airless-Cream-Bottles"
-                      />
-                      <div class="product__img-hover">
-                        <i
-                          class="fa-brands fa-searchengin"
-                          title="Quick Review"
-                        ></i>
-                        <i
-                          class="fa-solid fa-cart-arrow-down"
-                          title="Add to Cart"
-                        ></i>
-                        <i
-                          class="fa-regular fa-heart"
-                          title="Save to Favourite"
-                        ></i>
-                      </div>
-                    </a>
-                  </div>
-                  <a href=""
-                    ><div class="product__title">Airless Cream Bottles</div></a
-                  >
-                  <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <div class="price">$0.01 - $0.5</div>
-                </div>
-              </div>
+          <!-- --------------- Show Item ---------------- -->
+          <div class="products-container"></div>
+          <!-- --------------- ListPage ---------------- -->
+          <ul class="listPage">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          <!-- --------------- Show CartTab right ---------------- -->
+          <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart"></div>
+            <div class="btn">
+              <button class="close">CLOSE</button>
+              <button class="checkOut">
+                <a href=".././HTML/checkout.html">Check Out</a>
+              </button>
             </div>
           </div>
+          <!-- --------------- Introduce ---------------- -->
+          <section class="introducing">
+            <div class="introduce">
+              <div class="box">
+                <h2>| Welcome to PETBot</h2>
+                <br />
+                <p>
+                  - We are PETBot company which is one of the well known
+                  business entities involved in manufactures, supplies and
+                  exports all kinds of PET/PP/PC Bottles. We have PET Bottle
+                  Factory.
+                  <br />
+                  - Available in customized form, our machines used by a number
+                  of manufacturing companies in the production of packaged
+                  drinking water, household chemicals, pharmaceuticals, cooking
+                  oils, alcohol, rabbit care, pesticides, ...
+                </p>
+              </div>
+              <figure class="image">
+                <img
+                  src=".././images/HomePage/Introduce/introduce.jpg"
+                  alt=""
+                />
+                <figcaption>CEOs of PETBot Company.</figcaption>
+              </figure>
+            </div>
+          </section>
+          <!-- --------------- Frequently asked questions ---------------- -->
+          <section class="faq">
+            <h2>| Frequently asked questions</h2>
+            <ul class="accordion">
+              <li>
+                <input type="radio" name="accordion" id="first" />
+                <label for="first">What is PET plastic?</label>
+                <div class="content-question">
+                  <p>
+                    - PET plastic stands for
+                    <strong>Polyethylene Terephthalate</strong> is a type of
+                    plastic commonly used for household and manufacturing
+                    products. Transparent PET plastic, mechanically durable, has
+                    high heat resistance.
+                  </p>
+                  <br />
+                  <p>
+                    <strong>PET</strong> is the common name for a type of
+                    plastic in the polyester family.
+                    <strong>Polyester PET</strong> is formed from
+                    <strong>ethylene glycol (EG)</strong> and
+                    <strong>terephthalic acid (TPA)</strong> also known as “pure
+                    terephthalic acid” or PTA. The full chemical name of PET
+                    plastic is <strong>polyethylene terephthalate</strong> .
+                  </p>
+                  <br />
+                  <p>
+                    Besides PP, HDPE, LDPE, PET is one of the widely used safe
+                    plastics. Almost every plastic water bottle in the world is
+                    made of PET. Thanks to its light weight, easy transport, it
+                    does not bioreact with the food or drink it contains.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <input type="radio" name="accordion" id="second" />
+                <label for="second"
+                  >Why is PET plastic used to make plastic bottles?</label
+                >
+                <div class="content-question">
+                  <p>
+                    Why do so many soft drink and bottled water companies now
+                    use plastic bottles instead of glass bottles? Because like
+                    glass, PET plastic is hygienic, durable, safe, and protects
+                    drinks from microorganisms. In addition, pet plastic does
+                    not react with food or beverages on the inside and will not
+                    biodegrade.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <input type="radio" name="accordion" id="third" />
+                <label for="third">Is it safe to use for health?</label>
+                <div class="content-question">
+                  <p>
+                    PET plastic has been approved by FDA and health authorities
+                    around the world as safe for contact with food and
+                    beverages.
+                  </p>
+                  <br />
+                  <p>
+                    Used in many types of packaging for many foods, including
+                    soft drinks, juice, peanut butter, beer, wine, supermarket
+                    packaging…
+                  </p>
+                  <br />
+                  <p>
+                    The bottle is made of pet plastic completely safe for users.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <input type="radio" name="accordion" id="fourth" />
+                <label for="fourth"
+                  >Are hormone-like substances transferred from PET bottles to
+                  beverages?
+                </label>
+                <div class="content-question">
+                  <p>
+                    The estrogenic activity of mineral waters was examined in
+                    several studies with cell culture test systems and in one
+                    test on snails. Estrogenic activity was detected in several
+                    cases, but it was approx. 10,000 times lower than the
+                    natural estrogenic activity of beverages such as milk, beer
+                    or red wine. The comparison between mineral waters from PET
+                    bottles and others from glass bottles did not show any
+                    differences with regard to the estrogenic activity measured
+                    in the cell cultures. It must therefore be assumed that this
+                    low activity is not attributable to the PET bottle. In
+                    chemical analyses of mineral waters, no substances have yet
+                    been detected either which could have caused the estrogenic
+                    activity.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
         </section>
+        <!-- --------------- Aside ---------------- -->
         <aside>
+          <!-- --------------- Receive Informations with email ---------------- -->
           <section class="receive-email">
             <div class="title">BE THE FIRST TO KNOW</div>
             <div class="text">
@@ -1067,35 +381,153 @@
             </div>
             <div><button type="submit">SUBMIT</button></div>
           </section>
+          <!-- --------------- show Feedback ---------------- -->
           <section class="testimonials">
             <div class="row-1">
-              <div class="title">TESTIMONIALS</div>
+              <a href=".././HTML/feedback.html"
+                ><div class="title">TESTIMONIALS</div></a
+              >
               <div class="btns">
                 <div class="btn left">
-                  <i class="fa-solid fa-chevron-left"></i>
+                  <i
+                    class="fa-solid fa-chevron-left"
+                    onclick="showFeadback(-1)"
+                  ></i>
                 </div>
                 <div class="btn right">
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    onclick="showFeadback(1)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="contents">
+              <div class="feedback active">
+                <img
+                  src=".././images/HomePage/Testimonials/avatar.jpg"
+                  alt="avatar"
+                />
+                <div class="text">
+                  “I am very impressed with the design of this airless bottle.
+                  It is not only elegant and professional but also very
+                  convenient. The size of the bottle is suitable for carrying
+                  with me every day.”
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+              <div class="feedback">
+                <img
+                  src=".././images/HomePage/Testimonials/avatar-2.jpeg"
+                  alt="avatar"
+                />
+                <div class="text">
+                  “I am very impressed with the design of this airless bottle.
+                  It is not only elegant and professional but also very
+                  convenient. The size of the bottle is suitable for carrying
+                  with me every day.”
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+              <div class="feedback">
+                <img
+                  src=".././images/HomePage/Testimonials/avatar-3.jpg"
+                  alt="avatar"
+                />
+                <div class="text">
+                  “I am very impressed with the design of this airless bottle.
+                  It is not only elegant and professional but also very
+                  convenient. The size of the bottle is suitable for carrying
+                  with me every day.”
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
               </div>
             </div>
           </section>
+          <!-- --------------- show Latest News ---------------- -->
           <section class="latest-news">
-            <div class="image"><img src="" alt="" /></div>
-            <div class="title">35 % Discount on second puchase!</div>
-            <div class="text">
-              Sed biandit nulla nec nunc ullamcorper tristique.Mar
+            <a href=".././HTML/news.html"><h2 class="title">LATEST NEWS</h2></a>
+            <div class="news n-1">
+              <div class="image">
+                <img
+                  src=".././images/HomePage/News/spray-bottle-how-to-unclog-it.png"
+                  alt="image"
+                />
+              </div>
+              <div class="title">
+                How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
+              </div>
+              <div class="text">
+                Spray bottles and aerosol cans can easily get clogged, rendering
+                them useless. But before you toss it out, try these simple
+                methods to unclog the nozzle and get your sprayer working again
+                ...
+              </div>
+              <div class="day">12.2.2024</div>
             </div>
-            <div class="day"></div>
+            <div class="news n-2">
+              <div class="image">
+                <img src=".././images/HomePage/News/news-4.png" alt="image" />
+              </div>
+              <div class="title">
+                Is It Safe To Put Bleach In A Spray Bottle?
+              </div>
+              <div class="text">
+                Bleach is a powerful disinfectant that can sanitize surfaces and
+                kill germs. But is it safe to put bleach in a spray bottle? This
+                comprehensive guide covers everything you need to know. The
+                Short Answer Yes, you can safely put diluted bleach in a spray
+                bottle for cleaning and disinfecting.
+              </div>
+              <div class="day">19.2.2024</div>
+            </div>
+            <div class="news n-3">
+              <div class="image">
+                <img src=".././images/HomePage/News/news-3.png" alt="image" />
+              </div>
+              <div class="title">How To Get Lotion Out Of Bottle</div>
+              <div class="text">
+                Empty lotion bottles that still have product left in them are a
+                common frustration. Pump bottles in particular seem designed to
+                leave an inch or two of lotion stuck at the bottom. While it may
+                seem like a trivial “first world problem”, the truth is…
+              </div>
+              <div class="day">21.1.2024</div>
+            </div>
+            <div class="box-btn">
+              <span class="btn"
+                ><a href=".././HTML/news.html">Read More</a></span
+              >
+            </div>
           </section>
         </aside>
       </div>
+      <!-- --------------- Footer ---------------- -->
       <footer>
         <div class="box">
           <div class="part-1">
             <div>
               <div class="col-5">
                 <div class="text-header">PETBot Company</div>
+                <!-- --------------- Social ---------------- -->
                 <div class="socials">
                   <a
                     href="https://www.facebook.com/"
@@ -1124,6 +556,7 @@
                 </div>
                 <p>Team with 5 members.</p>
               </div>
+              <!-- --------------- Contact Us ---------------- -->
               <div class="col-1">
                 <div class="gmail">
                   <i class="fa-solid fa-envelope"></i> petbot@company.com
@@ -1147,6 +580,7 @@
                 ></iframe>
               </div>
             </div>
+            <!-- --------------- Link  ---------------- -->
             <div class="col-6">
               <div class="text-header">| By Material</div>
               <ul>
@@ -1245,9 +679,13 @@
               </ul>
             </div>
           </div>
+          <!-- --------------- End link ---------------- -->
           <div class="part-2">&copy;PETBot 2024. All right reserved</div>
         </div>
       </footer>
     </div>
+    <!-- Link JS -->
+    <script src="../JS/home-page.js"></script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>
