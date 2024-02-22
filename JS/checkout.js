@@ -6,8 +6,8 @@ function checkCart(){
     }
 }
 checkCart();
-addCartToHTML();
-function addCartToHTML(){
+showItemCheckOut();
+function showItemCheckOut(){
     // clear data default
     let listCartHTML = document.querySelector('.returnCart .list');
     listCartHTML.innerHTML = '';
@@ -59,5 +59,5 @@ document.getElementById("btnCheckout").addEventListener("click",function(){
     localStorage.removeItem('cart');
 
     // Update cart HTML
-    addCartToHTML();
+    showItemCheckOut();
   });

@@ -6,23 +6,25 @@
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
         "material":"PET",
         "capacity":"20ml",
-        "show":"all"
+        "show":"all",
+        "description":"Airless bottles cosmetic packaging in SPPAR Series is design in PP Snap on cylindrical airless bottle whichs can't Open or Refill once it assembly. Pair with white PP airless bottles to safely package sensitive products by preventing their exposure to excess air."
     },
     {
         "id": 2,
         "name":"Air",
         "price":0.4,
         "image":".././images/HomePage/Products/All/AirlessPumpBottle.jpeg",
-        "material":"PET",
+        "material":"PP",
         "capacity":"20ml",
-        "show":"all"
+        "show":"all",
+        "description":"Airless bottles cosmetic packaging in SPPAR Series is design in PP Snap on cylindrical airless bottle whichs can't Open or Refill once it assembly. Pair with white PP airless bottles to safely package sensitive products by preventing their exposure to excess air."
     },
     {
         "id": 3,
         "name":"Air",
         "price":0.4,
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
+        "material":"PP",
         "capacity":"20ml",
         "show":"latest"
     },
@@ -40,7 +42,7 @@
         "name":"Air",
         "price":0.4,
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
+        "material":"PP",
         "capacity":"20ml",
         "show":"latest"
     },

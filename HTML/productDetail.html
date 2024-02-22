@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PETBot | Check Out</title>
-    <!-- Link Favicon -->
+    <title>PETBot | Product Detail</title>
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -19,8 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <!-- Link CSS -->
+    <link rel="stylesheet" href=".././CSS/home-page.css" />
+    <link rel="stylesheet" href=".././CSS/productDetail.css" />
     <link rel="stylesheet" href=".././CSS/main.css" />
-    <link rel="stylesheet" href=".././CSS/checkout.css" />
   </head>
   <body>
     <div class="homePage">
@@ -167,130 +168,70 @@
           <input type="search" placeholder="search here..." />
         </div>
         <!-- <form action="" class="login-form active" onsubmit="checkSub2()">
-                    <h3>login now</h3>
-                    <input type="email" placeholder="your email" class="box" />
-                    <input type="password" placeholder="your password" class="box" />
-                    <p>forget your password <a href="comingsoon.html">click here</a></p>
-                    <p>don't have an account <a href="register.html">create now</a></p>
-                    <input type="submit" value="login now" class="btn" />
-                  </form> -->
+              <h3>login now</h3>
+              <input type="email" placeholder="your email" class="box" />
+              <input type="password" placeholder="your password" class="box" />
+              <p>forget your password <a href="comingsoon.html">click here</a></p>
+              <p>don't have an account <a href="register.html">create now</a></p>
+              <input type="submit" value="login now" class="btn" />
+            </form> -->
       </section>
 
       <!-- --------------- SCroll Up Button ---------------- -->
       <a class="goToUp" href="#"
         ><i class="fa-solid fa-arrow-up" style="color: #000000"></i
       ></a>
-      <!-- --------------- Show CartTab right ---------------- -->
-      <div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <div class="listCart"></div>
-        <div class="btn">
-          <button class="close">CLOSE</button>
-          <button class="checkOut">
-            <a href=".././HTML/checkout.html">Check Out</a>
-          </button>
-        </div>
-      </div>
       <div class="container">
-        <div class="checkoutLayout">
-          <div class="returnCart">
-            <h2>
-              <i class="fa-solid fa-circle-left"></i>
-              <a href=".././HTML/home-page.html">Return shopping</a>
-            </h2>
-            <h1>List Product in Cart</h1>
-            <div class="list">
-              <!-- <div class="item">
-                    <img src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png">
-                    <div class="info">
-                        <div class="name">PRODUCT 1</div>
-                        <div class="price">$22/1 product</div>
-                    </div>
-                    <div class="quantity">5</div>
-                    <div class="returnPrice">$433.3</div>
-                </div> -->
-            </div>
+        <div class="title">PRODUCT DETAIL</div>
+        <div class="detail">
+          <div class="image">
+            <img
+              src=".././images/HomePage/Products/All/Airless-Cream-Bottles.png"
+            />
           </div>
-          <div class="right">
-            <h1>Checkout</h1>
-
-            <div class="form">
-              <div class="group">
-                <label for="name">Full Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Nguyen Van A"
-                />
-              </div>
-
-              <div class="group">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="0388826699"
-                />
-              </div>
-
-              <div class="group">
-                <label for="address">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  placeholder="8 Nam Tu Liem"
-                />
-              </div>
-
-              <div class="group">
-                <label for="country">Country</label>
-                <select name="country" id="country">
-                  <option value="">Choose..</option>
-                  <option value="">Viet Nam</option>
-                </select>
-              </div>
-
-              <div class="group">
-                <label for="city">City</label>
-                <select name="city" id="city">
-                  <option value="">Choose..</option>
-                  <option value="">Ha Noi</option>
-                  <option value="">Ho Chi Minh</option>
-                  <option value="">Da Nang</option>
-                  <option value="">Ha Tay</option>
-                </select>
-              </div>
+          <div class="content">
+            <h1 class="name"></h1>
+            <div class="material"></div>
+            <div class="capacity"></div>
+            <div class="price"></div>
+            <div class="description"></div>
+            <div class="buttons">
+              <button>Check Out</button>
+              <button>
+                Add To Cart
+                <span>
+                  <svg
+                    class=""
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
+                    />
+                  </svg>
+                </span>
+              </button>
             </div>
-            <div class="return">
-              <div class="row">
-                <div>Total Quantity</div>
-                <div class="totalQuantity">70</div>
-              </div>
-              <div class="row">
-                <div>Total Price</div>
-                <div class="totalPrice">$900</div>
-              </div>
-            </div>
-            <div class="ship"><i>*Your Order by Ship COD with address you have been filled in this form.</i></div>
-            <button class="buttonCheckout" id="btnCheckout">CHECKOUT</button>
-            <div class="popup center">
-              <div class="icon">
-                <i class="fa fa-check"></i>
-              </div>
-              <div class="title">Success!!</div>
-              <div class="description">
-                You have been bought products <b><i>success</i></b
-                >.
-              </div>
-              <div class="dismiss-btn">
-                <button id="dismiss-popup-btn">Dismiss</button>
+            <div class="cartTab">
+              <h1>Shopping Cart</h1>
+              <div class="listCart"></div>
+              <div class="btn">
+                <button class="close">CLOSE</button>
+                <button class="checkOut">
+                  <a href=".././HTML/checkout.html">Check Out</a>
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div class="title">Similar Product</div>
+        <div class="products-container"></div>
       </div>
       <footer>
         <div class="box">
@@ -455,7 +396,7 @@
         </div>
       </footer>
     </div>
-    <script src=".././JS/checkout.js"></script>
-    <script src=".././JS/main.js"></script>
   </body>
+  <script src=".././JS/productDetail.js"></script>
+  <script src=".././JS/main.js"></script>
 </html>
