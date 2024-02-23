@@ -1,44 +1,34 @@
-* {
-    box-sizing: border-box;
-}
 .bg.image {
-    background-image: url(.././images/News/Banner-news.png);
+    background-image: url(.././images/ProductType/AirlessPumpBottle.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 32rem;
-    /* filter: blur(1px);
-    -webkit-filter: blur(1px); */
 }
 
 .container {
     box-sizing: border-box;
     padding-top: 3.5rem;
-    width: 100%;
 }
 
 .container .banner {
-    width: 100%;
     position: relative;
 }
 
 .container .banner .text {
-    text-align: center;
+    padding: 0 2rem 0;
     color: #ffffff;
     position: absolute;
     background: rgb(95, 95, 95);
     background: rgba(95, 95, 95, 0.5);
-    padding: 2rem 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-    width: 80%;
-    height: 50%;
+    top: 0;
+    width: fit-content;
+    height: 100%;
 }
 
 .container .banner .text h2 {
+    margin-top: 2rem;
     font-size: 2.5rem;
 }
 

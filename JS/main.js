@@ -84,6 +84,7 @@ const addToCart = (product_id) => {
             image: product.image,
             capacity: product.capacity,
             material: product.material,
+            type: product.type,
             quantity: 1
         }];
     }else if(positionThisProductInCart < 0){
@@ -94,6 +95,7 @@ const addToCart = (product_id) => {
             image: product.image,
             capacity: product.capacity,
             material: product.material,
+            type: product.type,
             quantity: 1
         });
     }else{

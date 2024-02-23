@@ -1,4 +1,4 @@
-let listCart = [];
+ listCart = [];
 function checkCart(){
     var listCartValue = localStorage.getItem('cart');
     if(listCartValue){

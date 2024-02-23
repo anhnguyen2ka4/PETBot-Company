@@ -1,4 +1,3 @@
-let products = null;
 fetch(".././JS/products.json")
     .then((response) => response.json())
     .then((data) => {
