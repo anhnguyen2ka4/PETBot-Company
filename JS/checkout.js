@@ -52,7 +52,7 @@ document.getElementById("btnCheckout").addEventListener("click",function(){
   document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
     document.getElementById("btnCheckout").style.display = "block";
     document.getElementsByClassName("popup")[0].classList.remove("active");
-    window.location.href = ".././HTML/home-page.html";// replace with the URL of your home page
+    window.location.href = ".././HTML/orderBill.html";// replace with the URL of your home page
 
     // Clear cart
     cart = []; // or listCart = []; if you're using listCart for your cart

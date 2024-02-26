@@ -1,6 +1,3 @@
-* {
-    box-sizing: border-box;
-}
 .bg.image {
     background-image: url(.././images/News/Banner-news.png);
     background-size: cover;

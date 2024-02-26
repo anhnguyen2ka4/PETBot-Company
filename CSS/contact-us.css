@@ -1,0 +1,67 @@
+body {
+    background-color:#fff;
+}
+
+#contact-container {
+    box-sizing: border-box;
+    width: 50%;
+    margin:5rem 20rem;
+    padding-top: 5rem;
+    display: inline-block;
+    height: 70vh;
+}
+
+#contact-info {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
+}
+
+#contact-info i {
+    padding-right: 0.5rem;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 8px;
+}
+#map iframe{
+    height: 463px;
+    width: 100%
+}
+
+#customer-feedback {
+    margin:1rem auto;
+    padding: 20px;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 50%;
+}
+
+form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+input {
+    padding: 0.4rem;
+}
+.submit {
+    margin-top: 1rem;
+    background: transparent;
+    padding: 0.5rem;
+}
+
+.submit:hover {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}

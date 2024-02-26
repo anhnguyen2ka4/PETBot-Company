@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETBot | ADMIN</title>
+    <!-- Link Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href=".././images/Favicon/favicon.ico"
+    />
+    <!-- Link FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href=".././CSS/main.css" />
+    <link rel="stylesheet" href=".././CSS/admin.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Admin Page</h2>
+      <ul id="menu">
+        <li><a href="#" onclick="loadContent('overView')">Over View</a></li>
+        <li>
+          <a href="#" onclick="loadContent('userAccounts')">User Accounts</a>
+        </li>
+        <li><a href="#" onclick="loadContent('orders')">Orders</a></li>
+        <li>
+          <a href="#" onclick="toggleSubMenu('productManage')"
+            >Product Manage</a
+          >
+          <ul id="productManage">
+            <li>
+              <a href="#" onclick="loadContent('addProduct')">Add Product</a>
+            </li>
+            <li>
+              <a href="#" onclick="loadContent('updateProduct')"
+                >Update Product</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="loadContent('deleteProduct')"
+                >Delete Product</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="main-content" id="content">
+      <!-- Content will be loaded here -->
+    </div>
+    <!-- The popup -->
+    <div id="updateUserPopup" class="popup">
+      <div class="form-container">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Update User</h2>
+          <form onsubmit="updateUser(event)">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" /><br />
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" /><br />
+            <label for="status">Status:</label>
+            <select name="status" id="status" style="padding: 0.5rem 0">
+              <option value="">Choose..</option>
+              <option value="">Active</option>
+              <option value="">Passive</option>
+              <option value="">Ban</option></select
+            ><br />
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" /><br />
+            <input type="submit" value="Update" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="updateOrderPopup" class="popup">
+      <div class="form-container">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Update User</h2>
+          <form onsubmit="updateOrder(event)">
+            <label for="name">Customer Name:</label><br />
+            <input type="text" name="name" /><br />
+            <label for="status">Status:</label>
+            <select name="status" style="padding: 0.5rem 0">
+              <option value="">Choose..</option>
+              <option value="">Done</option>
+              <option value="">Delivering</option>
+              <option value="">Doing</option></select
+            ><br />
+            <label for="address">Shipping Address:</label><br />
+            <input type="text" name="address" /><br />
+            <label for="days">Order Date:</label><br />
+            <input type="datetime-local" name="days" /><br />
+            <input type="submit" value="Update" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      function loadContent(page) {
+        var content = document.getElementById("content");
+        switch (page) {
+          case "overView":
+            content.innerHTML = `
+                        <h2>Tổng quan</h2>
+                        <div class="overview-item">
+                            <h3> Total orders</h3>
+                            <p>100</p>
+                        </div>
+                        <div class="overview-item">
+                            <h3> Total messages</h3>
+                            <p>200</p>
+                        </div>
+                        <div class="overview-item">
+                            <h3> Total feedback</h3>
+                            <p>300</p>
+                        </div>
+                        <div class="overview-item">
+                            <h3> Total existing accounts</h3>
+                            <p>400</p>
+                        </div>
+                    `;
+            break;
+          case "userAccounts":
+            content.innerHTML = `
+                    <h2>User Accounts</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Password</th>
+                            <th>Status</th>
+                            <th>Creation Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>********</td>
+                            <td>Active</td>
+                            <td>2024-02-26</td>
+                            <td>
+                              <button onclick="openPopup()">Update</button>
+                              <button onclick="deleteUser(1)">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- More users here -->
+                    </table>
+                `;
+            break;
+          case "orders":
+            content.innerHTML = `
+                  <h2>Orders</h2>
+                  <table>
+                      <tr>
+                          <th>Order ID</th>
+                          <th>Customer Name</th>
+                          <th>Order Status</th>
+                          <th>Shipping Address</th>
+                          <th>Order Date</th>
+                          <th>Actions</th>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>Shipped</td>
+                          <td>123 Main St, Anytown, USA</td>
+                          <td>2024-02-26</td>
+                          <td>
+                              <button onclick="openPopup()">Update</button>
+                              <button onclick="deleteOrder(1)">Delete</button>
+                          </td>
+                      </tr>
+                      <!-- More orders here -->
+                  </table>
+              `;
+            break;
+          case "productManage":
+            break;
+          case "addProduct":
+            content.innerHTML = `
+                  <h2>Add Product</h2>
+                  <form onsubmit="addProduct(event)">
+                      <label for="name">Name:</label><br>
+                      <input type="text" id="name" name="name"><br>
+                      <label for="material">Material:</label><br>
+                      <input type="text" id="material" name="material"><br>
+                      <label for="capacity">Capacity:</label><br>
+                      <input type="text" id="capacity" name="capacity"><br>
+                      <label for="image">Image:</label><br>
+                      <input type="file" id="image" name="image"><br>
+                      <label for="description">Description:</label><br>
+                      <textarea id="description" name="description"></textarea><br>
+                      <input type="submit" value="Add">
+                  </form>
+              `;
+            break;
+          case "updateProduct":
+            content.innerHTML = `
+                    <h2>Update Product</h2>
+                    <form onsubmit="updateProduct(event)">
+                        <label for="id">ID:</label><br>
+                        <input type="text" id="id" name="id"><br>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="material">Material:</label><br>
+                        <input type="text" id="material" name="material"><br>
+                        <label for="capacity">Capacity:</label><br>
+                        <input type="text" id="capacity" name="capacity"><br>
+                        <label for="image">Image:</label><br>
+                        <input type="file" id="image" name="image"><br>
+                        <label for="description">Description:</label><br>
+                        <textarea id="description" name="description"></textarea><br>
+                        <input type="submit" value="Update">
+                    </form>
+                `;
+            break;
+          case "deleteProduct":
+            content.innerHTML = `
+                    <h2>Delete Product</h2>
+                    <form onsubmit="deleteProduct(event)">
+                        <label for="id">Product ID:</label><br>
+                        <input type="text" id="id" name="id" oninput="showProduct(this.value)"><br>
+                        <div id="productPreview">
+                            <h3>Product Preview</h3>
+                            <div class="products-container"></div>
+                        </div>
+                        <input type="submit" value="Delete">
+                    </form>
+                `;
+            break;
+        }
+      }
+
+      loadContent("overView");
+
+      function toggleSubMenu(id) {
+        var subMenu = document.getElementById(id);
+        if (subMenu.style.display === "none" || subMenu.style.display === "") {
+          subMenu.style.display = "block";
+        } else {
+          subMenu.style.display = "none";
+        }
+      }
+      function showProduct(id) {
+        // This is just a mockup, replace with actual product data
+        var productPreview = document.getElementById("productPreview");
+        productPreview.innerHTML = `
+                <h3>Product Preview</h3>
+                <div class="products-container"></div>
+            `;
+      }
+      function openPopup() {
+        document.getElementById("updateUserPopup").style.display = "block";
+        document.getElementById("updateOrderPopup").style.display = "block";
+      }
+
+      function closePopup() {
+        document.getElementById("updateUserPopup").style.display = "none";
+        document.getElementById("updateOrderPopup").style.display = "none";
+      }
+
+      function deleteUser(id) {
+        // This is just a mockup, replace with actual delete user logic
+        var confirmation = confirm(
+          "Are you sure you want to delete user with ID: " + id + "?"
+        );
+        if (confirmation) {
+          // Add your delete user logic here
+          alert("User with ID: " + id + " has been deleted.");
+          // After deleting the user, you might want to update the user list
+          loadContent("userAccounts");
+        }
+      }
+
+      function updateOrder(id) {
+        // Add your update order logic here
+        alert("Update order with ID: " + id);
+      }
+
+      function deleteOrder(id) {
+        // Add your delete order logic here
+        alert("Delete order with ID: " + id);
+      }
+
+      function addProduct(event) {
+        event.preventDefault();
+        // Add your add product logic here
+        alert("Add product with name: " + event.target.name.value);
+      }
+
+      function updateProduct(event) {
+        event.preventDefault();
+        // Add your update product logic here
+        alert("Update product with ID: " + event.target.id.value);
+      }
+    </script>
+  </body>
+</html>
