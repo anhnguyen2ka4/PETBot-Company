@@ -1,8 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
 .sidebar {
+    line-height: 2rem;
     width: 200px;
     height: 100vh;
     position: fixed;
@@ -15,10 +12,12 @@ body {
 }
 
 .sidebar h2 {
+    padding: 2rem 0;
     color: #fff;
 }
 
 .sidebar ul {
+    text-align: center;
     list-style-type: none;
     padding: 0;
 }
@@ -28,14 +27,22 @@ body {
     text-decoration: none;
 }
 
-.sidebar ul ul {
-    display: none;
+.sidebar ul li {
+    margin-bottom: 1rem;
+    background-color: #4e4e4e;
+    padding: 0.8rem 0;
 }
 
+.sidebar ul li:hover {
+    opacity: 0.8;
+}
+/* .sidebar ul ul {
+    display: none;
+} */
+
 .main-content {
-    margin: auto;
-    width: 60%;
-    /* margin-left: 220px; */
+    width: 75%;
+    margin-left: 250px;
     padding: 20px;
     background-color: #fff;
     /* border-left: 1px solid #ddd; */
@@ -53,16 +60,17 @@ body {
 .main-content table,
 .main-content th,
 .main-content td {
-    border: 1px solid #ddd;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
     padding: 8px;
 }
 
 .main-content th {
+    border:1px solid #e6e6e6;
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #333;
-    color: white;
+    /* background-color: #333; */
+    color: rgb(0, 0, 0);
 }
 
 .main-content button {
@@ -76,6 +84,10 @@ body {
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.main-content button:hover {
+    opacity: 0.8;
 }
 
 .main-content form {
@@ -99,6 +111,10 @@ body {
     width: auto;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 /* Add some styling for the overview section */
 #box-overview {
     display: grid;
@@ -107,18 +123,21 @@ body {
 }
 
 .overview-item {
+    line-height: 3rem;
+    text-align: center;
     width: 200px;
-    padding: 20px;
+    padding: 2rem 7rem;
     background-color: #ddd;
-    margin-bottom: 20px;
+    margin: 1rem 3rem 2rem 0;
 }
 
 .popup {
     display: none;
-    position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     overflow: auto;
