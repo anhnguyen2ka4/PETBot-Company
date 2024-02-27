@@ -33,10 +33,12 @@ body {
 }
 
 .main-content {
-    margin-left: 220px;
+    margin: auto;
+    width: 60%;
+    /* margin-left: 220px; */
     padding: 20px;
     background-color: #fff;
-    border-left: 1px solid #ddd;
+    /* border-left: 1px solid #ddd; */
 }
 
 .main-content h2 {
@@ -98,6 +100,12 @@ body {
 }
 
 /* Add some styling for the overview section */
+#box-overview {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: normal;
+}
+
 .overview-item {
     width: 200px;
     padding: 20px;
