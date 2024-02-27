@@ -33,7 +33,7 @@
         <li><a href="#" onclick="loadContent('orders')">Orders</a></li>
         <li>
           <a href="#" onclick="toggleSubMenu('productManage')"
-            >Product Manage</a
+            >Product Management</a
           >
           <ul id="productManage">
             <li>
@@ -61,12 +61,12 @@
       <div class="form-container">
         <div class="popup-content">
           <span class="close" onclick="closePopup()">&times;</span>
-          <h2>Update User</h2>
+          <h2>Update Account</h2>
           <form onsubmit="updateUser(event)">
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" /><br />
             <label for="username">Username:</label><br />
             <input type="text" id="username" name="username" /><br />
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" /><br />
             <label for="status">Status:</label>
             <select name="status" id="status" style="padding: 0.5rem 0">
               <option value="">Choose..</option>
@@ -74,8 +74,6 @@
               <option value="">Passive</option>
               <option value="">Ban</option></select
             ><br />
-            <label for="password">Password:</label><br />
-            <input type="password" id="password" name="password" /><br />
             <input type="submit" value="Update" />
           </form>
         </div>
@@ -85,10 +83,12 @@
       <div class="form-container">
         <div class="popup-content">
           <span class="close" onclick="closePopup()">&times;</span>
-          <h2>Update User</h2>
+          <h2>Update Order</h2>
           <form onsubmit="updateOrder(event)">
             <label for="name">Customer Name:</label><br />
             <input type="text" name="name" /><br />
+            <label for="phoneNumber">Phone Number:</label><br />
+            <input type="tel" name="number" /><br />
             <label for="status">Status:</label>
             <select name="status" style="padding: 0.5rem 0">
               <option value="">Choose..</option>
@@ -98,8 +98,6 @@
             ><br />
             <label for="address">Shipping Address:</label><br />
             <input type="text" name="address" /><br />
-            <label for="days">Order Date:</label><br />
-            <input type="datetime-local" name="days" /><br />
             <input type="submit" value="Update" />
           </form>
         </div>
@@ -111,7 +109,8 @@
         switch (page) {
           case "overView":
             content.innerHTML = `
-                        <h2>Tổng quan</h2>
+                        <h2>Over View</h2>
+                        <div id="box-overview">
                         <div class="overview-item">
                             <h3> Total orders</h3>
                             <p>100</p>
@@ -128,6 +127,7 @@
                             <h3> Total existing accounts</h3>
                             <p>400</p>
                         </div>
+                        </div>
                     `;
             break;
           case "userAccounts":
@@ -136,16 +136,18 @@
                     <table>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
+                            <th>Username</th>
                             <th>Password</th>
+                            <th>Date of Birth</th>
                             <th>Status</th>
                             <th>Creation Date</th>
                             <th>Actions</th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>John Doe</td>
+                            <td>vananguyen1234</td>
                             <td>********</td>
+                            <td>1999-03-19</td>
                             <td>Active</td>
                             <td>2024-02-26</td>
                             <td>
@@ -164,6 +166,8 @@
                       <tr>
                           <th>Order ID</th>
                           <th>Customer Name</th>
+                          <th>Phone Number</th>
+                          <th>Date of Birth</th>
                           <th>Order Status</th>
                           <th>Shipping Address</th>
                           <th>Order Date</th>
@@ -171,12 +175,14 @@
                       </tr>
                       <tr>
                           <td>1</td>
-                          <td>John Doe</td>
+                          <td>Nguyen Van A</td>
+                          <td>0399961835</td>
+                          <td>1999-03-19</td>
                           <td>Shipped</td>
-                          <td>123 Main St, Anytown, USA</td>
+                          <td>8 Ton That Thuyet, Nam Tu Liem, HN</td>
                           <td>2024-02-26</td>
                           <td>
-                              <button onclick="openPopup()">Update</button>
+                              <button onclick="openOrderPopup()">Update</button>
                               <button onclick="deleteOrder(1)">Delete</button>
                           </td>
                       </tr>
@@ -261,9 +267,10 @@
       }
       function openPopup() {
         document.getElementById("updateUserPopup").style.display = "block";
+      }
+      function openOrderPopup() {
         document.getElementById("updateOrderPopup").style.display = "block";
       }
-
       function closePopup() {
         document.getElementById("updateUserPopup").style.display = "none";
         document.getElementById("updateOrderPopup").style.display = "none";
