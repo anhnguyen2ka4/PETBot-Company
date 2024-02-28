@@ -44,15 +44,50 @@ function showItemCheckOut(){
 }
 console.log(listCart);
 
-document.getElementById("btnCheckout").addEventListener("click",function(){
-    document.getElementById("btnCheckout").style.display = "none";
-    document.getElementsByClassName("popup")[0].classList.add("active");
-  });
+document.getElementById("btnCheckout").addEventListener("click", function(event) {
+    // Prevent the form from submitting
+    event.preventDefault();
+
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var address = document.getElementById("address");
+    var country = document.getElementById("country");
+    var city = document.getElementById("city");
+
+    // Reset custom validity
+    name.setCustomValidity("");
+    phone.setCustomValidity("");
+    address.setCustomValidity("");
+    country.setCustomValidity("");
+    city.setCustomValidity("");
+
+    if (!name.value) {
+        name.setCustomValidity("Please enter your name.");
+    } else if (!phone.value) {
+        phone.setCustomValidity("Please enter your phone number.");
+    } else if (!address.value) {
+        address.setCustomValidity("Please enter your address.");
+    } else if (!country.value) {
+        country.setCustomValidity("Please select your country.");
+    } else if (!city.value) {
+        city.setCustomValidity("Please select your city.");
+    } else {
+        // All fields are filled, show the popup
+        document.getElementById("btnCheckout").style.display = "none";
+        document.getElementsByClassName("popup")[0].classList.add("active");
+    }
+
+    // Trigger form validation
+    event.target.form.reportValidity();
+});
+
    
-  document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
+document.getElementById("dismiss-popup-btn").addEventListener("click", function(event){
+    // Prevent the default action
+    event.preventDefault();
+
     document.getElementById("btnCheckout").style.display = "block";
     document.getElementsByClassName("popup")[0].classList.remove("active");
-    window.location.href = ".././HTML/orderBill.html";// replace with the URL of your home page
 
     // Clear cart
     cart = []; // or listCart = []; if you're using listCart for your cart
@@ -60,4 +95,8 @@ document.getElementById("btnCheckout").addEventListener("click",function(){
 
     // Update cart HTML
     showItemCheckOut();
-  });
+
+    // Redirect
+    window.location.href = ".././HTML/orderBill.html";
+});
+
