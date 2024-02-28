@@ -30,8 +30,10 @@
         <li>
           <a href="#" onclick="loadContent('userAccounts')">User Accounts</a>
         </li>
-        <li><a href="#" onclick="loadContent('orders')">Orders</a></li>
         <li>
+          <a href="#" onclick="loadContent('orders')" id="orders">Orders</a>
+        </li>
+        <!-- <li>
           <a href="#" onclick="toggleSubMenu('productManage')"
             >Product Management</a
           >
@@ -50,7 +52,7 @@
               >
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="main-content" id="content">
@@ -64,15 +66,32 @@
           <h2>Update Account</h2>
           <form onsubmit="updateUser(event)">
             <label for="username">Username:</label><br />
-            <input type="text" id="username" name="username" /><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="3"
+            /><br />
             <label for="password">Password:</label><br />
-            <input type="password" id="password" name="password" /><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+            /><br />
             <label for="status">Status:</label>
-            <select name="status" id="status" style="padding: 0.5rem 0">
+            <select
+              name="status"
+              id="status"
+              style="padding: 0.5rem 0"
+              required
+            >
               <option value="">Choose..</option>
-              <option value="">Active</option>
-              <option value="">Passive</option>
-              <option value="">Ban</option></select
+              <option value="active">Active</option>
+              <option value="passive">Passive</option>
+              <option value="ban">Ban</option></select
             ><br />
             <input type="submit" value="Update" />
           </form>
@@ -86,18 +105,23 @@
           <h2>Update Order</h2>
           <form onsubmit="updateOrder(event)">
             <label for="name">Customer Name:</label><br />
-            <input type="text" name="name" /><br />
+            <input type="text" name="name" required minlength="3" /><br />
             <label for="phoneNumber">Phone Number:</label><br />
-            <input type="tel" name="number" /><br />
+            <input
+              type="tel"
+              name="number"
+              required
+              pattern="[0-9]{10}"
+            /><br />
             <label for="status">Status:</label>
-            <select name="status" style="padding: 0.5rem 0">
+            <select name="status" style="padding: 0.5rem 0" required>
               <option value="">Choose..</option>
-              <option value="">Done</option>
-              <option value="">Delivering</option>
-              <option value="">Doing</option></select
+              <option value="done">Done</option>
+              <option value="delivering">Delivering</option>
+              <option value="doing">Processing</option></select
             ><br />
             <label for="address">Shipping Address:</label><br />
-            <input type="text" name="address" /><br />
+            <input type="text" name="address" required /><br />
             <input type="submit" value="Update" />
           </form>
         </div>
@@ -109,11 +133,14 @@
         switch (page) {
           case "overView":
             content.innerHTML = `
-                        <h2>Over View</h2>
+                        <h2>Over View</h2></br>
                         <div id="box-overview">
-                        <div class="overview-item">
+                          <div class="overview-item">
+                            <a href="#" onclick="loadContent('orders')"
+                                style="color:black">
                             <h3> Total orders</h3>
                             <p>100</p>
+                        </a>
                         </div>
                         <div class="overview-item">
                             <h3> Total messages</h3>
@@ -124,15 +151,18 @@
                             <p>300</p>
                         </div>
                         <div class="overview-item">
+                          <a href="#" onclick="loadContent('userAccounts')"
+                          style="color:black">
                             <h3> Total existing accounts</h3>
                             <p>400</p>
+                          </a>
                         </div>
                         </div>
                     `;
             break;
           case "userAccounts":
             content.innerHTML = `
-                    <h2>User Accounts</h2>
+                    <h2>User Accounts</h2></br>
                     <table>
                         <tr>
                             <th>ID</th>
@@ -148,26 +178,48 @@
                             <td>vananguyen1234</td>
                             <td>********</td>
                             <td>1999-03-19</td>
-                            <td>Active</td>
-                            <td>2024-02-26</td>
+                            <td class="underline">Active</td>
+                            <td>2024-02-10</td>
                             <td>
                               <button onclick="openPopup()">Update</button>
                               <button onclick="deleteUser(1)">Delete</button>
                             </td>
                         </tr>
-                        <!-- More users here -->
+                        <tr>
+                            <td>2</td>
+                            <td>nguyenanh206</td>
+                            <td>********</td>
+                            <td>2005-03-21</td>
+                            <td class="underline">Passive</td>
+                            <td>2024-02-12</td>
+                            <td>
+                              <button onclick="openPopup()">Update</button>
+                              <button onclick="deleteUser(1)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>vanthu6498</td>
+                            <td>********</td>
+                            <td>2013-02-19</td>
+                            <td class="underline">Ban</td>
+                            <td>2024-02-24</td>
+                            <td>
+                              <button onclick="openPopup()">Update</button>
+                              <button onclick="deleteUser(1)">Delete</button>
+                            </td>
+                        </tr>
                     </table>
                 `;
             break;
           case "orders":
             content.innerHTML = `
-                  <h2>Orders</h2>
+                  <h2>Orders</h2></br>
                   <table>
                       <tr>
                           <th>Order ID</th>
                           <th>Customer Name</th>
                           <th>Phone Number</th>
-                          <th>Date of Birth</th>
                           <th>Order Status</th>
                           <th>Shipping Address</th>
                           <th>Order Date</th>
@@ -175,18 +227,40 @@
                       </tr>
                       <tr>
                           <td>1</td>
-                          <td>Nguyen Van A</td>
+                          <td>Nguyen Van Anh</td>
                           <td>0399961835</td>
-                          <td>1999-03-19</td>
-                          <td>Shipped</td>
-                          <td>8 Ton That Thuyet, Nam Tu Liem, HN</td>
+                          <td class="underline">Shipped</td>
+                          <td>8 Ton That Thuyet,</br> Nam Tu Liem, HN</td>
                           <td>2024-02-26</td>
                           <td>
                               <button onclick="openOrderPopup()">Update</button>
                               <button onclick="deleteOrder(1)">Delete</button>
                           </td>
                       </tr>
-                      <!-- More orders here -->
+                      <tr>
+                          <td>2</td>
+                          <td>Nguyen Thi Thu</td>
+                          <td>0899861835</td>
+                          <td class="underline">Delivering</td>
+                          <td>8 Ton That Thuyet,</br> Nam Tu Liem, HN</td>
+                          <td>2024-02-25</td>
+                          <td>
+                              <button onclick="openOrderPopup()">Update</button>
+                              <button onclick="deleteOrder(1)">Delete</button>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Nguyen Hoang Duyen</td>
+                          <td>0399961835</td>
+                          <td class="underline">Processing</td>
+                          <td>8 Ton That Thuyet,</br> Nam Tu Liem, HN</td>
+                          <td>2024-02-12</td>
+                          <td>
+                              <button onclick="openOrderPopup()">Update</button>
+                              <button onclick="deleteOrder(1)">Delete</button>
+                          </td>
+                      </tr>
                   </table>
               `;
             break;
