@@ -131,6 +131,11 @@
     margin: 1rem 3rem 2rem 0;
 }
 
+.overview-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .popup {
     display: none;
     z-index: 1;
