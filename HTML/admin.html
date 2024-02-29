@@ -33,32 +33,12 @@
         <li>
           <a href="#" onclick="loadContent('orders')" id="orders">Orders</a>
         </li>
-        <!-- <li>
-          <a href="#" onclick="toggleSubMenu('productManage')"
-            >Product Management</a
-          >
-          <ul id="productManage">
-            <li>
-              <a href="#" onclick="loadContent('addProduct')">Add Product</a>
-            </li>
-            <li>
-              <a href="#" onclick="loadContent('updateProduct')"
-                >Update Product</a
-              >
-            </li>
-            <li>
-              <a href="#" onclick="loadContent('deleteProduct')"
-                >Delete Product</a
-              >
-            </li>
-          </ul>
-        </li> -->
       </ul>
     </div>
     <div class="main-content" id="content">
       <!-- Content will be loaded here -->
     </div>
-    <!-- The popup -->
+    <!-- The popup User update-->
     <div id="updateUserPopup" class="popup">
       <div class="form-container">
         <div class="popup-content">
@@ -98,6 +78,7 @@
         </div>
       </div>
     </div>
+    <!-- The popup  Order update-->
     <div id="updateOrderPopup" class="popup">
       <div class="form-container">
         <div class="popup-content">
@@ -162,7 +143,29 @@
             break;
           case "userAccounts":
             content.innerHTML = `
-                    <h2>User Accounts</h2></br>
+                    <table id="table-header">
+                      <tr>
+                        <th><h2>User Accounts</h2></br></th>
+                        <th>
+                          <form class="d-flex">
+                            <span>From</span>
+                            <input type="datetime-local"/>
+                            <span>To</span>
+                            <input type="datetime-local"/>
+                            <span>Status
+                              <select name="status" style="padding: 0.5rem 0" required>
+                                  <option value="">Choose..</option>
+                                  <option value="active">Active</option>
+                                  <option value="passive">Passive</option>
+                                  <option value="ban">Ban</option>
+                                </select>  
+                            </span>
+                            <i class="fa-solid fa-magnifying-glass fa-lg"
+                            style="cursor:pointer;"></i>
+                          </form>
+                        </th>
+                      </tr>
+                    </table>
                     <table>
                         <tr>
                             <th>ID</th>
@@ -214,7 +217,29 @@
             break;
           case "orders":
             content.innerHTML = `
-                  <h2>Orders</h2></br>
+            <table id="table-header-1">
+                      <tr>
+                        <th><h2>Orders</h2></br></th>
+                        <th>
+                          <form class="d-flex">
+                            <span>From</span>
+                            <input type="datetime-local"/>
+                            <span>To</span>
+                            <input type="datetime-local"/>
+                            <span>Status
+                              <select name="status" style="padding: 0.5rem 0" required>
+                                  <option value="">Choose..</option>
+                                  <option value="shipped">Shipped</option>
+                                  <option value="delivering">Delivering</option>
+                                  <option value="processing">Processing</option>
+                                </select>  
+                            </span>
+                            <i class="fa-solid fa-magnifying-glass fa-lg"
+                            style="cursor:pointer;"></i>
+                          </form>
+                        </th>
+                      </tr>
+                    </table>
                   <table>
                       <tr>
                           <th>Order ID</th>
@@ -233,7 +258,6 @@
                           <td>8 Ton That Thuyet,</br> Nam Tu Liem, HN</td>
                           <td>2024-02-26</td>
                           <td>
-                              <button onclick="openOrderPopup()">Update</button>
                               <button onclick="deleteOrder(1)">Delete</button>
                           </td>
                       </tr>
