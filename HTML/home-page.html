@@ -32,7 +32,9 @@
     <div class="homePage">
       <!-- --------------- Header ---------------- -->
       <section class="header">
+        <!-- --------------- NavBar Menu ---------------- -->
         <nav>
+          <!-- --------------- Logo ---------------- -->
           <div class="logo">
             <div class="image-logo">
               <p class="textLogo1">BOTTLE</p>
@@ -43,6 +45,7 @@
             </div>
             <div class="textLogo2">PET</div>
           </div>
+          <!-- --------------- Menu ---------------- -->
           <ul>
             <li class="link"><a href=".././HTML/home-page.html">Home</a></li>
             <li class="link menu-products">
@@ -151,13 +154,19 @@
             <li class="link"><a href=".././HTML/about-us.html">About Us</a></li>
             <li class="link"><a href=".././HTML/feedback.html">Feedback</a></li>
           </ul>
+          <!-- --------------- Icons ---------------- -->
           <div class="icons">
-            <div onclick="toggleSearchForm()">
+            <!-- --------------- Search ---------------- -->
+            <div id="glass">
               <i
                 class="fa-solid fa-magnifying-glass fa-lg"
                 style="color: #ffffff"
               ></i>
+              <div id="showSearch">
+                <input type="search" placeholder="search here..." />
+              </div>
             </div>
+            <!-- --------------- Shopping Cart ---------------- -->
             <div class="icon-cart">
               <i
                 class="fa-solid fa-cart-shopping fa-lg"
@@ -165,26 +174,21 @@
               ></i>
               <span>0</span>
             </div>
-            <a href="#"
-              ><i
+            <!-- --------------- User Login and Admin login ---------------- -->
+            <div id="dropbtn">
+              <i
                 class="fa-solid fa-circle-user fa-2xl"
                 style="color: #ffffff"
-              ></i
-            ></a>
+              ></i>
+              <div id="dropdown-content" class="dropdown-content">
+                <a href=".././HTML/login.html"
+                  ><i class="fa-solid fa-money-check fa-lg"></i> Customer</a
+                >
+              </div>
+            </div>
             <div class="fas fa-bars" id="menu-btn"></div>
           </div>
         </nav>
-        <div id="showSearch">
-          <input type="search" placeholder="search here..." />
-        </div>
-        <!-- <form action="" class="login-form active" onsubmit="checkSub2()">
-          <h3>login now</h3>
-          <input type="email" placeholder="your email" class="box" />
-          <input type="password" placeholder="your password" class="box" />
-          <p>forget your password <a href="comingsoon.html">click here</a></p>
-          <p>don't have an account <a href="register.html">create now</a></p>
-          <input type="submit" value="login now" class="btn" />
-        </form> -->
       </section>
 
       <!-- --------------- SCroll Up Button ---------------- -->
@@ -225,7 +229,7 @@
             >
             <span class="btn" onclick="showItems('spesial')">Spesial</span>
           </div>
-          <!-- --------------- Show Item ---------------- -->
+          <!-- --------------- Show Item here---------------- -->
           <div class="products-container"></div>
           <!-- --------------- ListPage ---------------- -->
           <ul class="listPage">

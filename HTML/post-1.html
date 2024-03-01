@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PETbot | News</title>
+    <title>Document</title>
     <link
       rel="icon"
       type="image/x-icon"
       href=".././images/Favicon/favicon.ico"
     />
     <!-- Link CSS -->
-    <link rel="stylesheet" href=".././CSS/news.css" />
     <link rel="stylesheet" href=".././CSS/main.css" />
+    <link rel="stylesheet" href=".././CSS/post.css" />
     <!-- Link FontAwesome -->
     <link
       rel="stylesheet"
@@ -31,7 +31,9 @@
   <body>
     <!-- --------------- Header ---------------- -->
     <section class="header">
+      <!-- --------------- NavBar Menu ---------------- -->
       <nav>
+        <!-- --------------- Logo ---------------- -->
         <div class="logo">
           <div class="image-logo">
             <p class="textLogo1">BOTTLE</p>
@@ -39,6 +41,7 @@
           </div>
           <div class="textLogo2">PET</div>
         </div>
+        <!-- --------------- Menu ---------------- -->
         <ul>
           <li class="link"><a href=".././HTML/home-page.html">Home</a></li>
           <li class="link menu-products">
@@ -145,15 +148,21 @@
             <a href=".././HTML/contact-us.html">Contact Us</a>
           </li>
           <li class="link"><a href=".././HTML/about-us.html">About Us</a></li>
-          <li class="link"><a href="">Feedback</a></li>
+          <li class="link"><a href=".././HTML/feedback.html">Feedback</a></li>
         </ul>
+        <!-- --------------- Icons ---------------- -->
         <div class="icons">
-          <div onclick="toggleSearchForm()">
+          <!-- --------------- Search ---------------- -->
+          <div id="glass">
             <i
               class="fa-solid fa-magnifying-glass fa-lg"
               style="color: #ffffff"
             ></i>
+            <div id="showSearch">
+              <input type="search" placeholder="search here..." />
+            </div>
           </div>
+          <!-- --------------- Shopping Cart ---------------- -->
           <div class="icon-cart">
             <i
               class="fa-solid fa-cart-shopping fa-lg"
@@ -161,242 +170,266 @@
             ></i>
             <span>0</span>
           </div>
-          <a href="#"
-            ><i
+          <!-- --------------- User Login and Admin login ---------------- -->
+          <div id="dropbtn">
+            <i
               class="fa-solid fa-circle-user fa-2xl"
               style="color: #ffffff"
-            ></i
-          ></a>
+            ></i>
+            <div id="dropdown-content" class="dropdown-content">
+              <a href=".././HTML/login.html"
+                ><i class="fa-solid fa-money-check fa-lg"></i> Customer</a
+              >
+            </div>
+          </div>
           <div class="fas fa-bars" id="menu-btn"></div>
         </div>
       </nav>
-      <div id="showSearch">
-        <input type="search" placeholder="search here..." />
-      </div>
     </section>
 
     <!-- --------------- SCroll Up Button ---------------- -->
     <a class="goToUp" href="#"
       ><i class="fa-solid fa-arrow-up" style="color: #000000"></i
     ></a>
-    <!-- --------------- Show CartTab right ---------------- -->
-    <div class="cartTab">
-      <h1>Shopping Cart</h1>
-      <div class="listCart"></div>
-      <div class="btn">
-        <button class="close">CLOSE</button>
-        <button class="checkOut">
-          <a href=".././HTML/checkout.html">Check Out</a>
-        </button>
-      </div>
+    <div class="navigate back d-flex">
+      <div><a href="../HTML/home-page.html">Home</a></div>
+      /
+      <div><a href=".././HTML/news.html">News</a></div>
+      /
+      <div>Everything You Need To Know About Droppers And Pipettes</div>
     </div>
-    <div class="container">
-      <section class="banner">
-        <div class="bg image"></div>
-        <div class="text">
-          <h2 style="letter-spacing: 0.5rem; font-size: 4rem">NEWS</h2>
-          <br />
-          <h2>-- Knowledge Center Of Bottle Package --</h2>
-        </div>
-      </section>
-      <section class="content d-flex">
+    <!-- --------------- Content Wrapper ---------------- -->
+    <div class="bg-post">
+      <div class="content-wrapper d-flex">
         <div class="main">
-          <div class="row r1">
-            <div class="col-1">
-              <div>15</div>
-              <div>AUG</div>
+          <div class="title">
+            Everything You Need To Know About Droppers And Pipettes
+          </div>
+          <div class="detail-view d-flex">
+            <i class="fa-regular fa-pen-to-square fa-sm"></i>
+            <span>Nguyen Anh</span>
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>2024-01-03 / 11:06:07</span>
+            <i class="fa-regular fa-eye fa-sm"></i>
+            <span>36</span>
+          </div>
+          <div class="image">
+            <img src=".././images/News/news-1.png" alt="" />
+          </div>
+          <div class="text">
+            <p>
+              Droppers and pipettes are essential tools used across healthcare,
+              science, and more. Although small, they play a big role in
+              transferring and measuring liquids accurately.
+            </p>
+            <h2>What Are Droppers And Pipettes?</h2>
+            <p>
+              A dropper consists of a squeezable tube used to transfer small
+              volumes of liquid, drop by drop. A pipette is designed to
+              precisely measure and transfer liquids in volumes ranging from
+              microliters to milliliters.
+            </p>
+            <h2>Types Of Droppers</h2>
+            <p>
+              Glass droppers/Durable, chemically resistant, transparent. Used in
+              pharmaceuticals and essential oils. Plastic droppers/ Lightweight,
+              cost-effective. Used in labs for non-reactive substances. <br />
+              Graduated droppers/Allow accurate measurements with volume
+              markings. Essential for medical dosing.
+            </p>
+            <h2>Types Of Pipettes</h2>
+            <p>
+              Pasteur pipettes Disposable plastic/glass tubes for transferring
+              small volumes in labs. Volumetric pipettes Highly accurate and
+              calibrated for specific volumes. Ideal for analytical work.
+              Micropipettes Measure microliter volumes precisely. Vital for
+              molecular biology and diagnostics.
+            </p>
+            <h2>How Do Droppers Work?</h2>
+            <p>
+              Droppers use capillary action to draw liquid into the tube and
+              surface tension to hold it. Squeezing the bulb forces the liquid
+              out in drops. Some rely on gravity, others require squeezing.
+            </p>
+            <h2>How Do Pipettes Work?</h2>
+            <p>
+              Pipettes use displacement to draw liquid into the tip, measuring
+              the volume precisely. They allow accurate dispensing of liquids,
+              critical in labs and clinics.
+            </p>
+            <h2>Applications In Healthcare</h2>
+            <p>
+              Medical testing Precise handling of samples for accurate
+              diagnoses. <br />
+              Pharmaceuticals Ensure correct drug dosages for treatment
+              effectiveness.
+            </p>
+            <h2>Uses In Science</h2>
+            <p>
+              Research labs Enable accurate measurements and experiments. <br />
+              Scientists Dispense reagents and perform experiments reliably.
+            </p>
+            <h2>Uses In DIY</h2>
+            <p>
+              Arts and crafts Blend pigments and create intricate designs.
+              <br />
+              Aromatherapy Dispense essential oils safely.
+            </p>
+            <h2>Maintenance Tips</h2>
+            <p>
+              Clean and sterilize properly to prevent contamination. <br />
+              Follow hygiene protocols, especially in healthcare/science.
+            </p>
+            <h2>Choosing The Right Tool</h2>
+            <p>
+              Consider the liquid, required precision, and usage environment.
+              Select appropriate size and material for the application.
+            </p>
+            <h2>Safety Tips</h2>
+            <p>
+              Use proper protective gear when handling hazardous substances.
+              <br />
+              Employ correct techniques to prevent accidents.
+            </p>
+            <h2>Recent Advancements</h2>
+            <p>
+              Automated and digital pipettes for improved efficiency. <br />
+              Eco-friendly materials and production processes.
+            </p>
+            <h2>Common Mistakes</h2>
+            <p>
+              Overfilling or underfilling. <br />
+              Mixing incompatible liquids. <br />
+              In summary, droppers and pipettes play critical roles across
+              diverse fields, enabling precise transfer and measurement of
+              liquids. Their accuracy and versatility make them indispensable
+              tools.
+            </p>
+          </div>
+          <div class="share d-flex">
+            <div>
+              <i class="fa-solid fa-share-nodes" style="color: #e1e1e2"></i>
             </div>
-            <div class="col-2">
-              <img src=".././images/News/news-1.png" alt="image" />
-              <div class="icon d-flex">
-                <div class="icon-1">
-                  <i class="fa-regular fa-pen-to-square fa-sm"></i>
-                  Nguyen Anh
-                  <i class="fa-regular fa-comment fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-tag fa-sm"></i>
-                  Knowledge
-                </div>
-                <div class="icon-2">
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-heart fa-sm"></i>
-                  25
-                </div>
-              </div>
-              <a href=".././HTML/post-1.html" class="title"
-                >Everything You Need To Know About Droppers And Pipettes
-              </a>
-              <div class="contents">
-                Droppers and pipettes are essential tools used across
-                healthcare, science, and more. Although small, they play a big
-                role in transferring and measuring liquids accurately. <br />
-                A dropper consists of a squeezable tube used to transfer small
-                volumes of liquid, drop by drop. A pipette is designed to
-                precisely measure and transfer liquids in volumes ranging from
-                microliters to milliliters...
-              </div>
+            Share post with
+            <div id="socials">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-telegram"></i>
             </div>
           </div>
-          <div class="row r3">
-            <div class="col-1">
-              <div>19</div>
-              <div>NOW</div>
+          <div class="back d-flex">
+            <div>
+              <i
+                class="fa-solid fa-angle-left"
+                style="font-size: 1.5rem; padding-right: 0.2rem"
+              ></i>
             </div>
-            <div class="col-2">
-              <img src=".././images/News/r3.jpg" alt="image" />
-              <div class="icon d-flex">
-                <div class="icon-1">
-                  <i class="fa-regular fa-pen-to-square fa-sm"></i>
-                  Nguyen Anh
-                  <i class="fa-regular fa-comment fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-tag fa-sm"></i>
-                  Knowledge
-                </div>
-                <div class="icon-2">
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-heart fa-sm"></i>
-                  25
-                </div>
-              </div>
-              <a href=".././HTML/post-1.html" class="title"
-                >Everything You Need To Know About Droppers And Pipettes
-              </a>
-              <div class="contents">
-                Droppers and pipettes are essential tools used across
-                healthcare, science, and more. Although small, they play a big
-                role in transferring and measuring liquids accurately. <br />
-                A dropper consists of a squeezable tube used to transfer small
-                volumes of liquid, drop by drop. A pipette is designed to
-                precisely measure and transfer liquids in volumes ranging from
-                microliters to milliliters...
-              </div>
-            </div>
-          </div>
-          <div class="row r4">
-            <div class="col-1">
-              <div>06</div>
-              <div>JUN</div>
-            </div>
-            <div class="col-2">
-              <img src=".././images/News/r4.jpg" alt="image" />
-              <div class="icon d-flex">
-                <div class="icon-1">
-                  <i class="fa-regular fa-pen-to-square fa-sm"></i>
-                  Nguyen Anh
-                  <i class="fa-regular fa-comment fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-tag fa-sm"></i>
-                  Knowledge
-                </div>
-                <div class="icon-2">
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  30
-                  <i class="fa-solid fa-heart fa-sm"></i>
-                  25
-                </div>
-              </div>
-              <a href=".././HTML/post-1.html" class="title"
-                >Everything You Need To Know About Droppers And Pipettes
-              </a>
-              <div class="contents">
-                Droppers and pipettes are essential tools used across
-                healthcare, science, and more. Although small, they play a big
-                role in transferring and measuring liquids accurately. <br />
-                A dropper consists of a squeezable tube used to transfer small
-                volumes of liquid, drop by drop. A pipette is designed to
-                precisely measure and transfer liquids in volumes ranging from
-                microliters to milliliters...
-              </div>
-            </div>
+            <div><a href=".././HTML/news.html">Back to News</a></div>
           </div>
         </div>
         <aside>
-          <section class="latest-news">
-            <a href=".././HTML/news.html"
-              ><h2 class="title-header">| Recent Posts</h2></a
-            >
-            <div class="news n-1">
-              <div class="image">
-                <img src=".././images/News/trash.jpg" alt="image" />
+          <div class="title">| Recent Posts</div>
+          <div class="news n-1">
+            <div class="image">
+              <img
+                src=".././images/HomePage/News/spray-bottle-how-to-unclog-it.png"
+                alt="image"
+              />
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+              <div>
+                <i class="fa-regular fa-clock fa-sm"></i>
+                <span class="day">29/02/2024</span>
               </div>
-              <div class="d-flex">
-                <div>
-                  <i class="fa-regular fa-clock fa-sm"></i>
-                  <span class="day">29/02/2024</span>
-                </div>
-                <div>
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  <span class="day">24</span>
-                </div>
-              </div>
-              <div class="title">
-                How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
-              </div>
-              <div class="text">
-                Spray bottles and aerosol cans can easily get clogged, rendering
-                them useless. But before you toss it out, try these simple
-                methods to unclog the nozzle and get your sprayer working again
-                ...
+              <div>
+                <i class="fa-regular fa-eye fa-sm"></i>
+                <span class="day">24</span>
               </div>
             </div>
-            <div class="news n-2">
-              <div class="image">
-                <img src=".././images/News/glass.jpg" alt="image" />
+            <div class="title">
+              How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
+            </div>
+            <div class="text">
+              Spray bottles and aerosol cans can easily get clogged, rendering
+              them useless. But before you toss it out, try these simple methods
+              to unclog the nozzle and get your sprayer working again ...
+            </div>
+          </div>
+          <div class="news n-2">
+            <div class="image">
+              <img src=".././images/HomePage/News/news-2.png" alt="image" />
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+              <div>
+                <i class="fa-regular fa-clock fa-sm"></i>
+                <span class="day">29/02/2024</span>
               </div>
-              <div class="d-flex">
-                <div>
-                  <i class="fa-regular fa-clock fa-sm"></i>
-                  <span class="day">26/02/2024</span>
-                </div>
-                <div>
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  <span class="day">100</span>
-                </div>
-              </div>
-              <div class="title">
-                Is It Safe To Put Bleach In A Spray Bottle?
-              </div>
-              <div class="text">
-                Bleach is a powerful disinfectant that can sanitize surfaces and
-                kill germs. But is it safe to put bleach in a spray bottle? This
-                comprehensive guide covers everything you need to know. The
-                Short Answer Yes, you can safely put diluted bleach in a spray
-                bottle for cleaning and disinfecting.
+              <div>
+                <i class="fa-regular fa-eye fa-sm"></i>
+                <span class="day">24</span>
               </div>
             </div>
-            <div class="news n-3">
-              <div class="image">
-                <img src=".././images/News/bottle.jpg" alt="image" />
+            <div class="title">
+              How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
+            </div>
+            <div class="text">
+              Spray bottles and aerosol cans can easily get clogged, rendering
+              them useless. But before you toss it out, try these simple methods
+              to unclog the nozzle and get your sprayer working again ...
+            </div>
+          </div>
+          <div class="news n-3">
+            <div class="image">
+              <img src=".././images/HomePage/News/news-3.png" alt="image" />
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+              <div>
+                <i class="fa-regular fa-clock fa-sm"></i>
+                <span class="day">29/02/2024</span>
               </div>
-              <div class="d-flex">
-                <div>
-                  <i class="fa-regular fa-clock fa-sm"></i>
-                  <span class="day">10/02/2024</span>
-                </div>
-                <div>
-                  <i class="fa-regular fa-eye fa-sm"></i>
-                  <span class="day">36</span>
-                </div>
-              </div>
-              <div class="title">How To Get Lotion Out Of Bottle</div>
-              <div class="text">
-                Empty lotion bottles that still have product left in them are a
-                common frustration. Pump bottles in particular seem designed to
-                leave an inch or two of lotion stuck at the bottom. While it may
-                seem like a trivial “first world problem”, the truth is…
+              <div>
+                <i class="fa-regular fa-eye fa-sm"></i>
+                <span class="day">24</span>
               </div>
             </div>
-            <div class="box-btn">
-              <span class="btn"
-                ><a href=".././HTML/news.html">Read More</a></span
-              >
+            <div class="title">
+              How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
             </div>
-          </section>
+            <div class="text">
+              Spray bottles and aerosol cans can easily get clogged, rendering
+              them useless. But before you toss it out, try these simple methods
+              to unclog the nozzle and get your sprayer working again ...
+            </div>
+          </div>
+          <div class="news n-4">
+            <div class="image">
+              <img src=".././images/HomePage/News/news-4.png" alt="image" />
+            </div>
+            <div class="d-flex" style="justify-content: space-between">
+              <div>
+                <i class="fa-regular fa-clock fa-sm"></i>
+                <span class="day">29/02/2024</span>
+              </div>
+              <div>
+                <i class="fa-regular fa-eye fa-sm"></i>
+                <span class="day">24</span>
+              </div>
+            </div>
+            <div class="title">
+              How To Unclog A Spray Bottle Or Aerosol Can Nozzle?
+            </div>
+            <div class="text">
+              Spray bottles and aerosol cans can easily get clogged, rendering
+              them useless. But before you toss it out, try these simple methods
+              to unclog the nozzle and get your sprayer working again ...
+            </div>
+          </div>
+          <div class="box-btn">
+            <span class="btn"><a href=".././HTML/news.html">Read More</a></span>
+          </div>
         </aside>
-      </section>
+      </div>
     </div>
     <!-- --------------- Footer ---------------- -->
     <footer>
