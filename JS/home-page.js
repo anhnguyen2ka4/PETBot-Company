@@ -39,12 +39,3 @@ function showfeadbacks(n) {
   }
   feadbacks[feadbackIndex-1].style.display = "block";  
 }
-
-function toggleSearchForm() {
-    var searchForm = document.getElementById("showSearch");
-    if (searchForm.style.display === "none") {
-        searchForm.style.display = "block";
-    } else {
-        searchForm.style.display = "none";
-    }
-  }
