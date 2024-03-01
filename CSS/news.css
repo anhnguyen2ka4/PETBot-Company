@@ -1,5 +1,5 @@
 .bg.image {
-    background-image: url(.././images/News/Banner-news.png);
+    background-image: url(.././images/News/bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,26 +26,161 @@
     position: absolute;
     background: rgb(95, 95, 95);
     background: rgba(95, 95, 95, 0.5);
-    padding: 2rem 0;
+    padding: 3rem 0 1rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
     width: 80%;
-    height: 50%;
+    height: 40%;
 }
 
 .container .banner .text h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .container .banner .text p {
     line-height: 2rem;
 }
 
-.products-container {
-    padding-top: 4rem;
-    width: 90%;
+.d-flex {
+    display: flex;
+}
+
+.content {
+    position: relative;
     margin: auto;
-    grid-template-columns: repeat(4, 1fr);
+    width: 90%
+}
+
+.main {
+    margin: 4rem auto;
+    width: 65;
+}
+
+.row {
+    width: 100%;
+    margin:0 auto 2rem auto;
+    display: grid;
+    grid-template-columns: 8% 90%;
+    gap: 0.5rem;
+}
+
+.main .col-1 {
+    display: block;
+    padding: 1rem;
+    background-color: #353535;
+    color: #ffffff;
+    text-align: center;
+    height: max-content;
+}
+
+.main .col-2 {
+    width: 90%;
+}
+
+.main .col-2 img {
+    width: 100%;
+}
+
+.main .col-2 .title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+}
+aside {
+    position: sticky;
+    top: 10%;
+    margin-top: 4rem;
+    width: 45%;
+}
+
+.latest-news {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.latest-news .title-header {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.latest-news img {
+    width: 100%;
+    height: 12rem;
+}
+
+.latest-news .title {
+    cursor: pointer;
+    color: #000000;
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.latest-news .title:hover {
+    text-decoration: underline;
+}
+
+.latest-news .day {
+    color: #777777;
+    font-size: 0.8rem;
+}
+
+.latest-news .view {
+    font-size: 0.8rem;
+    float: right;
+}
+
+.latest-news .right {
+    float: right;
+}
+.news .text {
+    font-size: 0.8rem;
+}
+
+.news .d-flex {
+    justify-content: space-between;
+}
+
+.news {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.latest-news .box-btn {
+    text-align: center;
+}
+
+.latest-news .btn {
+    cursor: pointer;
+    font-size: 0.8rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.latest-news .btn:hover {
+    background-color: #777777;
+}
+
+.main .icon {
+    margin: 0.5rem 0;
+    justify-content: space-between;
+    color: #777777;
+}
+
+.main .icon i {
+    color: #000000;
+    padding:0 0 0 1rem;
+}
+
+.main .contents {
+    margin-top: 0.5rem;
+    color: #000000;
+}
+
+.main .col-2 a:hover {
+    text-decoration: underline;
 }
