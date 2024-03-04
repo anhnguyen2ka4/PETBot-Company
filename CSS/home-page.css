@@ -1,11 +1,15 @@
 .homePage {
-    box-sizing: border-box;
+    position: relative;
     width: auto;
     margin: auto;
 }
 
 
 /*================== Banner ===================*/
+.box-banner {
+    position: static;
+}
+
 .image-banner {
     background-image: url('.././images/HomePage/Banner/Banner2024.png');
     background-size: 100%;
@@ -389,4 +393,26 @@ input[type=radio] {
 
 .accordion input[type=radio]:checked+label::before {
     content: '-';
+}
+
+@media (max-width: 1100px) {
+    .contents {
+        display: block;
+    }
+
+    .products {
+        width: 90%;
+    }
+
+    aside {
+        width: 90%;
+    }
+
+    .news {
+        width: 80%;
+    }
+
+    .latest-news img {
+        height: 25rem;
+    }
 }
