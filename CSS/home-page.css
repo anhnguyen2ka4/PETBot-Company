@@ -8,6 +8,7 @@
 /*================== Banner ===================*/
 .box-banner {
     position: static;
+    width: 100%;
 }
 
 .image-banner {
@@ -92,16 +93,15 @@
 .menu_buttons {
     padding: 1rem 0 1.5rem 0;
     display: flex;
-    width: max-content;
 }
 
 .menu_buttons .btn {
     margin-right: 0.2rem;
     background-color: #DDDEE2;
     color: #000000;
-    padding: 0.8rem 4.5rem;
+    padding: 0.8rem 2.5rem;
     cursor: pointer;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .menu_buttons .btn:hover {
@@ -217,6 +217,7 @@ aside .receive-email:hover {
 }
 
 .receive-email input {
+    width: max-content;
     text-align: center;
     padding: 0.8rem 2rem;
 }
@@ -396,12 +397,33 @@ input[type=radio] {
 }
 
 @media (max-width: 1100px) {
+    .box-banner {
+        position: relative;
+        width: 100%;
+        height: 30rem;
+    }
+
+    .box-banner .image-banner {
+        height: 30.5rem;
+    }
+
+    .box-banner .text-btn-banner {
+        position: absolute;
+        margin-top: -32%;
+        right: -2%;
+    }
+
+    .menu_buttons .btn {
+        float: left;
+    }
+
     .contents {
         display: block;
     }
 
     .products {
         width: 90%;
+        margin: 5% auto;
     }
 
     aside {
@@ -409,10 +431,129 @@ input[type=radio] {
     }
 
     .news {
-        width: 80%;
+        width: 100%;
     }
 
     .latest-news img {
         height: 25rem;
     }
+
+    .receive-email {
+        width: 100%;
+    }
 }
+
+@media (max-width: 900px) {
+    .box-banner {
+        width: 100%;
+        height: 26rem;
+    }
+
+    .box-banner .image-banner {
+        height: 26rem;
+    }
+
+    .box-banner .text-btn-banner {
+        margin-top: -32%;
+        right: -8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box-banner {
+        width: 100%;
+        height: 22rem;
+    }
+
+    .box-banner .image-banner {
+        height: 22rem;
+    }
+
+    .box-banner .text-btn-banner {
+        width: 38%;
+        margin-top: -32%;
+        right: -8%;
+    }
+
+    .text-btn-banner .text-header {
+        font-size: 1.2rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .text-btn-banner p {
+        font-size: 0.8rem;
+    }
+
+    .box-banner .btn {
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .box-banner {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .box-banner .image-banner {
+        height: 20rem;
+    }
+
+    .box-banner .text-btn-banner {
+        width: 42%;
+        margin-top: -40%;
+        right: -8%;
+    }
+}
+
+@media (max-width: 500px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .box-banner {
+        width: 100%;
+        height: 18rem;
+    }
+
+    .box-banner .image-banner {
+        height: 18rem;
+    }
+
+    .box-banner .text-btn-banner {
+        line-height: 1.5rem;
+        width: 53%;
+        margin-top: -40%;
+        right: -20%;
+    }
+
+    .text-btn-banner .text-header {
+        font-size: 1rem;
+        margin-bottom: -0.1rem;
+    }
+
+    .text-btn-banner p {
+        font-size: 0.6rem;
+    }
+
+    .menu_buttons {
+        display: block;
+    }
+    .menu_buttons .btn {
+        margin-top: 0.5rem;
+        display: block;
+    }
+    .products-container {
+        margin-top: 6.5rem;
+    }
+    .box-banner .btn {
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media (max-width: 320px) {}

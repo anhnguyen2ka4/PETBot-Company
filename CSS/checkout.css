@@ -244,3 +244,11 @@ a {
 .popup.active .dismiss-btn {
   transition: all 300ms ease-in-out 400ms;
 }
+
+@media (max-width: 1100px) {
+  .checkoutLayout {
+    margin: auto;
+    display: block;
+    max-width: 630px;
+  }
+}
