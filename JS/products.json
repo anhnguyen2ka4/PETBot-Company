@@ -1,64 +1,68 @@
 [
     {
         "id": 1,
-        "name":"Airless Pump Bottle",
+        "name":"Blue Square Bottle",
         "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
+        "image":".././images/HomePage/Products/All/lotion-1.jpg",
+        "material":"PC",
         "capacity":"20ml",
         "show":"all",
-        "description":"Airless bottles cosmetic packaging in SPPAR Series is design in PP Snap on cylindrical airless bottle whichs can't Open or Refill once it assembly. Pair with white PP airless bottles to safely package sensitive products by preventing their exposure to excess air.",
+        "description":"The bottle is made of opaque blue plastic, which protects light-sensitive materials. The pump also features a quick and easy-to-use twist lock to dispense no unnecessary soap. All dispensing pumps include a transparent cover and ship to you in a locked position. Turn the pump head 90° counterclockwise to unlock.",
         "type":"Airless Pump Bottle"
     },
     {
         "id": 2,
-        "name":"Air",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/AirlessPumpBottle.jpeg",
-        "material":"PP",
-        "capacity":"20ml",
+        "name":"Comestic Lotion Bottle",
+        "price":0.2,
+        "image":".././images/HomePage/Products/All/comestic-1.jpg",
+        "material":"PET",
+        "capacity":"15ml",
         "show":"all",
-        "description":"Airless bottles cosmetic packaging in SPPAR Series is design in PP Snap on cylindrical airless bottle whichs can't Open or Refill once it assembly. Pair with white PP airless bottles to safely package sensitive products by preventing their exposure to excess air.",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
         "id": 3,
-        "name":"Air",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PP",
-        "capacity":"20ml",
-        "show":"latest",
+        "name":"Plastic Medicine Bottles",
+        "price":0.5,
+        "image":".././images/HomePage/Products/All/medicine-bottle.jpg",
+        "material":"PC",
+        "capacity":"10ml",
+        "show":"all",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
         "id": 4,
         "name":"Air",
         "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "image":".././images/HomePage/Products/Latest/juice-2.jpg",
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
         "id": 5,
-        "name":"Air",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "name":"Boston Juice Bottle",
+        "price":0.8,
+        "image":".././images/HomePage/Products/Latest/juice-1.jpg",
         "material":"PP",
-        "capacity":"20ml",
+        "capacity":"350ml",
         "show":"latest",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
         "id": 6,
-        "name":"Air",
+        "name":"Juice Bottle",
         "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "image":".././images/HomePage/Products/Latest/juice-2.jpg",
         "material":"PET",
-        "capacity":"20ml",
+        "capacity":"200ml",
         "show":"latest",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
@@ -69,6 +73,7 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
@@ -79,6 +84,7 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
         "type":"Airless Pump Bottle"
     },
     {
@@ -88,7 +94,8 @@
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
         "material":"PET",
         "capacity":"20ml",
-        "show":"best-Sellers"
+        "show":"best-Sellers",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 10,
@@ -97,7 +104,8 @@
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
         "material":"PET",
         "capacity":"20ml",
-        "show":"spesial"
+        "show":"spesial",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 11,
@@ -106,7 +114,8 @@
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
         "material":"PET",
         "capacity":"20ml",
-        "show":"spesial"
+        "show":"spesial",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 12,
@@ -119,56 +128,58 @@
     },
     {
         "id": 13,
-        "name":"Airless Pump Bottle",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "name":"Juice Bottle Set",
+        "price":2.8,
+        "image":".././images/HomePage/Products/Latest/juice-3.jpg",
         "material":"PET",
         "capacity":"20ml",
-        "show":"all"
+        "show":"latest",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 14,
-        "name":"Airless Pump Bottle",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "name":"Juice Bottle",
+        "price":0.6,
+        "image":".././images/HomePage/Products/Latest/juice-2.jpg",
         "material":"PET",
-        "capacity":"20ml",
+        "capacity":"300ml",
         "show":"all"
     },
     {
         "id": 15,
-        "name":"Airless Pump Bottle",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "name":"Clear Travel Bottle Set",
+        "price":2.8,
+        "image":".././images/HomePage/Products/All/travel-set-1.jpg",
         "material":"PET",
         "capacity":"20ml",
         "show":"all"
     },
     {
         "id": 16,
-        "name":"Airless Pump Bottle",
+        "name":"Airless Pump Bottle Set",
         "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
+        "image":".././images/HomePage/Products/All/airless-pump-4.jpg",
+        "material":"PC",
         "capacity":"20ml",
         "show":"all"
     },
     {
         "id": 17,
-        "name":"Airless Pump Bottle",
+        "name":"Juice Bottle",
         "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
+        "image":".././images/HomePage/Products/Latest/juice-6.jpg",
         "material":"PET",
-        "capacity":"20ml",
-        "show":"latest"
+        "capacity":"250ml",
+        "show":"latest",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 18,
-        "name":"Airless Pump Bottle",
-        "price":0.4,
-        "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
-        "capacity":"20ml",
+        "name":"Square Juice Bottle",
+        "price":0.2,
+        "image":".././images/HomePage/Products/Latest/juice-7.jpg",
+        "material":"PP",
+        "capacity":"150ml",
         "show":"latest"
     },
     {
@@ -185,7 +196,7 @@
         "name":"Air",
         "price":0.4,
         "image":".././images/HomePage/Products/All/Airless-Cream-Bottles.png",
-        "material":"PET",
+        "material":"PC",
         "capacity":"20ml",
         "show":"best-Sellers"
     },

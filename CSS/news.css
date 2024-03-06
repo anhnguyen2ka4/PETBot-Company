@@ -204,3 +204,35 @@ aside {
 .main .col-2 a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1300px) {
+    .content {
+        display: block;
+    }
+    .latest-news .image img {
+        height: 30rem;
+    }
+    aside {
+        width: 90%;
+        margin: auto;
+    }
+
+    .latest-news .news .title{
+        font-size: 2rem;
+    }
+    
+    .latest-news .news .text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .content .main .row .col-1 {
+        width: max-content;
+    }
+
+    .content .main .row {
+        margin: auto;
+        width: 80%;
+    }
+}

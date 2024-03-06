@@ -196,3 +196,13 @@ const initApp = () => {
     })
 }
 initApp();
+
+function openNavBar() {
+    document.getElementById("navBar").style.width = "70%";
+    document.getElementById("close-btn").style.display = "block";
+  }
+
+function closeNavBar() {
+    document.getElementById("navBar").style.width = "";
+    document.getElementById("close-btn").style.display = "none";
+}

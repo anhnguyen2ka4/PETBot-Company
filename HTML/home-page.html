@@ -10,8 +10,8 @@
       href=".././images/Favicon/favicon.ico"
     />
     <!-- Link CSS -->
-    <link rel="stylesheet" href=".././CSS/home-page.css" />
     <link rel="stylesheet" href=".././CSS/main.css" />
+    <link rel="stylesheet" href=".././CSS/home-page.css" />
     <!-- Link FontAwesome -->
     <link
       rel="stylesheet"
@@ -229,14 +229,25 @@
             impressive assortment.
           </p>
           <!-- --------------- Menu Show Item with selection button ---------------- -->
-          <div class="menu_buttons">
-            <span class="btn active" onclick="showItems('all')">All</span>
-            <span class="btn" onclick="showItems('latest')">Latest</span>
-            <span class="btn" onclick="showItems('best-Sellers')"
-              >Best-Sellers</span
-            >
-            <span class="btn" onclick="showItems('spesial')">Spesial</span>
-          </div>
+          <ul class="menu_buttons">
+            <li>
+              <span class="btn active" onclick="showItems('all')">All</span>
+            </li>
+            <li>
+              <span class="btn" onclick="showItems('latest')">Latest</span>
+            </li>
+            <li>
+              <span
+                class="btn"
+                onclick="showItems('best-Sellers')"
+                style="white-space: nowrap"
+                >Best-Sellers</span
+              >
+            </li>
+            <li>
+              <span class="btn" onclick="showItems('spesial')">Spesial</span>
+            </li>
+          </ul>
           <!-- --------------- Show Item here---------------- -->
           <div class="products-container"></div>
           <!-- --------------- ListPage ---------------- -->
@@ -547,107 +558,6 @@
       <footer>
         <div class="box">
           <div class="part-1">
-            <!-- --------------- Link  ---------------- -->
-            <div class="links">
-              <div class="col-3 col">
-                <div class="text-header">| By Application</div>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Water Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Juice Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Lotion Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Medicine Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Oil Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Chemical Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Travel Set Bottle</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-2 col">
-                <div class="text-header">| By Type</div>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Airless Pump Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Boston Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Foam Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Spray Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Square Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Squeeze Bottle</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-6 col">
-                <div class="text-header">| By Material</div>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i><a href="">PET</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i><a href="">PP</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i><a href="">PC</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-4 col">
-                <div class="text-header">| Comestic Container</div>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Roll Ball Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Sunscreen Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Skin Lotion Bottle</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-caret-right"></i
-                    ><a href="">Cream Bottle</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
             <div class="socialsAndContact">
               <!-- --------------- Text header and Socials ---------------- -->
               <div class="col-5">
@@ -705,8 +615,106 @@
                 ></iframe>
               </div>
             </div>
+            <!-- --------------- Link  ---------------- -->
+            <div class="col-3 col">
+              <div class="text-header">| By Application</div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Water Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Juice Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Lotion Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Medicine Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Oil Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Chemical Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Travel Set Bottle</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2 col">
+              <div class="text-header">| By Type</div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Airless Pump Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Boston Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Foam Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Spray Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Square Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Squeeze Bottle</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col">
+              <div class="text-header">| By Material</div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i><a href="">PET</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i><a href="">PP</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i><a href="">PC</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 col">
+              <div class="text-header">| Comestic Container</div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Roll Ball Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Sunscreen Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Skin Lotion Bottle</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-caret-right"></i
+                  ><a href="">Cream Bottle</a>
+                </li>
+              </ul>
+            </div>
+            <!-- --------------- End link ---------------- -->
           </div>
-          <!-- --------------- End link ---------------- -->
           <div class="part-2">&copy;PETBot 2024. All right reserved</div>
         </div>
       </footer>

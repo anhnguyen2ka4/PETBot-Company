@@ -45,11 +45,14 @@
           <div class="textLogo2">PET</div>
         </div>
         <!-- --------------- Menu ---------------- -->
-        <ul>
-          <li class="link"><a href=".././HTML/home-page.html">Home</a></li>
+        <ul id="navBar">
+          <li id="close-btn" onclick="closeNavBar()">&times;</li>
+          <li class="link home">
+            <a href=".././HTML/home-page.html">Home</a>
+          </li>
           <li class="link menu-products">
             <a href="#">Products</a>
-            <div class="drop-menu">
+            <div class="drop-menu" id="dropMenu">
               <ul class="drop-menu-1">
                 <li class="text-header">| By Material</li>
                 <li>
@@ -185,7 +188,12 @@
               >
             </div>
           </div>
-          <div class="fas fa-bars" id="menu-btn"></div>
+          <i
+            class="fas fa-bars fa-lg"
+            id="menu-btn"
+            style="color: #ffffff"
+            onclick="openNavBar()"
+          ></i>
         </div>
       </nav>
     </section>
@@ -635,7 +643,8 @@
     <footer>
       <div class="box">
         <div class="part-1">
-          <div>
+          <div class="socialsAndContact">
+            <!-- --------------- Text header and Socials ---------------- -->
             <div class="col-5">
               <div class="text-header">PETBot Company</div>
               <!-- --------------- Social ---------------- -->
@@ -689,44 +698,7 @@
             </div>
           </div>
           <!-- --------------- Link  ---------------- -->
-          <div class="col-6">
-            <div class="text-header">| By Material</div>
-            <ul>
-              <li><i class="fa-solid fa-caret-right"></i><a href="">PET</a></li>
-              <li><i class="fa-solid fa-caret-right"></i><a href="">PP</a></li>
-              <li><i class="fa-solid fa-caret-right"></i><a href="">PC</a></li>
-            </ul>
-          </div>
-          <div class="col-2">
-            <div class="text-header">| By Type</div>
-            <ul>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Airless Pump Bottle</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Boston Bottle</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Foam Bottle</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Spray Bottle</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Square Bottle</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-caret-right"></i
-                ><a href="">Squeeze Bottle</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-3">
+          <div class="col-3 col">
             <div class="text-header">| By Application</div>
             <ul>
               <li>
@@ -758,7 +730,44 @@
               </li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-2 col">
+            <div class="text-header">| By Type</div>
+            <ul>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Airless Pump Bottle</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Boston Bottle</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Foam Bottle</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Spray Bottle</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Square Bottle</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-caret-right"></i
+                ><a href="">Squeeze Bottle</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col">
+            <div class="text-header">| By Material</div>
+            <ul>
+              <li><i class="fa-solid fa-caret-right"></i><a href="">PET</a></li>
+              <li><i class="fa-solid fa-caret-right"></i><a href="">PP</a></li>
+              <li><i class="fa-solid fa-caret-right"></i><a href="">PC</a></li>
+            </ul>
+          </div>
+          <div class="col-4 col">
             <div class="text-header">| Comestic Container</div>
             <ul>
               <li>
@@ -779,10 +788,11 @@
               </li>
             </ul>
           </div>
+          <!-- --------------- End link ---------------- -->
         </div>
-        <!-- --------------- End link ---------------- -->
         <div class="part-2">&copy;PETBot 2024. All right reserved</div>
       </div>
     </footer>
+    <script src=".././JS/main.js"></script>
   </body>
 </html>
