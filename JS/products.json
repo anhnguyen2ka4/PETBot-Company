@@ -140,7 +140,7 @@
         "id": 14,
         "name":"Juice Bottle",
         "price":0.6,
-        "image":".././images/HomePage/Products/Latest/juice-2.jpg",
+        "image":".././images/HomePage/Products/Latest/juice-7.jpg",
         "material":"PET",
         "capacity":"300ml",
         "show":"all"
@@ -157,7 +157,7 @@
     {
         "id": 16,
         "name":"Airless Pump Bottle Set",
-        "price":0.4,
+        "price":3.6,
         "image":".././images/HomePage/Products/All/airless-pump-4.jpg",
         "material":"PC",
         "capacity":"20ml",

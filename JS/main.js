@@ -54,7 +54,7 @@ const addDataToHTML = () => {
                         <div class="material">Material: ${product.material}</div>
                         <div class="capacity">Capacity: ${product.capacity}</div>
                     </div>
-                    <div class="price">Price: <b><u>$${product.price}</u></b></div>
+                    <div class="price">Price: <b>$${product.price}</b></div>
                     <a href=".././HTML/productDetail.html?id=${product.id}">
                         <h2>${product.name}</h2>
                     </a>
