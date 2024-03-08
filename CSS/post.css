@@ -12,6 +12,7 @@
 .navigate a:hover {
     opacity: 0.8;
 }
+
 .bg-post {
     padding-top: 2rem;
     width: 100%;
@@ -43,7 +44,7 @@
 
 .content-wrapper aside {
     width: 25%;
-    margin:3rem auto;
+    margin: 3rem auto;
 }
 
 .detail-view {
@@ -86,7 +87,7 @@
     align-items: center;
 }
 
-.bg-post .main .share i{
+.bg-post .main .share i {
     padding: 0 0.5rem 0 0.5rem;
     font-size: 2rem;
 }
@@ -95,6 +96,7 @@
     opacity: 0.8;
     cursor: pointer;
 }
+
 .bg-post .main a {
     color: #000000;
 }
@@ -108,6 +110,10 @@
 
 .bg-post .main .back:hover {
     opacity: 1;
+}
+
+#btn-download:hover {
+    opacity: 0.8;
 }
 
 aside .title {
@@ -145,9 +151,9 @@ aside .box-btn {
     text-align: center;
 }
 
-aside .box-btn a{
+aside .box-btn a {
     background-color: #000000;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
     color: #ffffff;
     font-size: 0.8rem;
 }
@@ -164,9 +170,6 @@ aside .box-btn:hover {
 .reply #title {
     font-size: 2rem;
     padding: 1rem 0;
-}
-
-.reply form {
 }
 
 .reply input {
