@@ -7,8 +7,7 @@
         "material":"PC",
         "capacity":"20ml",
         "show":"all",
-        "description":"The bottle is made of opaque blue plastic, which protects light-sensitive materials. The pump also features a quick and easy-to-use twist lock to dispense no unnecessary soap. All dispensing pumps include a transparent cover and ship to you in a locked position. Turn the pump head 90° counterclockwise to unlock.",
-        "type":"Airless Pump Bottle"
+        "description":"The bottle is made of opaque blue plastic, which protects light-sensitive materials. The pump also features a quick and easy-to-use twist lock to dispense no unnecessary soap. All dispensing pumps include a transparent cover and ship to you in a locked position. Turn the pump head 90° counterclockwise to unlock."
     },
     {
         "id": 2,
@@ -18,8 +17,7 @@
         "material":"PET",
         "capacity":"15ml",
         "show":"all",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 3,
@@ -29,8 +27,7 @@
         "material":"PC",
         "capacity":"10ml",
         "show":"all",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 4,
@@ -40,8 +37,7 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 5,
@@ -51,8 +47,7 @@
         "material":"PP",
         "capacity":"350ml",
         "show":"latest",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 6,
@@ -62,8 +57,7 @@
         "material":"PET",
         "capacity":"200ml",
         "show":"latest",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 7,
@@ -73,8 +67,7 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 8,
@@ -84,8 +77,7 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"best-Sellers",
-        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
-        "type":"Airless Pump Bottle"
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear."
     },
     {
         "id": 9,
@@ -235,5 +227,85 @@
         "material":"PET",
         "capacity":"20ml",
         "show":"spesial"
+    },
+    {
+        "id": 25,
+        "name":"Airless Pump Bottles",
+        "price":0.8,
+        "image":".././images/ProductType/al1.jpg",
+        "material":"PET",
+        "capacity":"80ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 26,
+        "name":"Airless Pump Bottles",
+        "price":0.6,
+        "image":".././images/ProductType/al2.jpg",
+        "material":"PP",
+        "capacity":"100ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 27,
+        "name":"Airless Pump Bottles",
+        "price":0.2,
+        "image":".././images/ProductType/al3.jpg",
+        "material":"PC",
+        "capacity":"50ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 28,
+        "name":"Airless Pump Bottles",
+        "price":0.4,
+        "image":".././images/ProductType/al4.jpg",
+        "material":"PET",
+        "capacity":"50ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 29,
+        "name":"Airless Pump Bottles",
+        "price":0.2,
+        "image":".././images/ProductType/al5.png",
+        "material":"PP",
+        "capacity":"50ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 30,
+        "name":"Airless Pump Bottles",
+        "price":0.4,
+        "image":".././images/ProductType/al6.jpg",
+        "material":"PET",
+        "capacity":"60ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 31,
+        "name":"Airless Pump Bottles",
+        "price":0.5,
+        "image":".././images/ProductType/al7.jpg",
+        "material":"PP",
+        "capacity":"80ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
+    },
+    {
+        "id": 32,
+        "name":"Airless Pump Bottles",
+        "price":0.3,
+        "image":".././images/ProductType/al8.jpg",
+        "material":"PC",
+        "capacity":"50ml",
+        "description":"With a secure screw cap and 100% brand-new quality, these bottles are your ideal choice for skin care creams. The epitome of elegance, the AFHSNA PCR Bottle series combines aesthetic appeal with durability, weighing 20g for frosted and 28g for clear.",
+        "type":"Airless Pump Bottle"
     }
 ]
